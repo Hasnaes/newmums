@@ -192,8 +192,8 @@ end
 
 file = URI.open("")
 activity9 = Activity.create(
-  name: '',
-  description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
+  name: 'Papayoe indoor playground',
+  description: 'De Papayoe biedt een in een ruime infrastructuur speelplezier en ontspanning voor alle leeftijden. Het is onmogelijk om zich hier te vervelen.',
   capacity: 100,
   price: 14€,
   location: 'Antwerpen',
@@ -213,7 +213,7 @@ end
 
 file = URI.open("")
 activity10 = Activity.create(
-  name: 'Splish Splash',
+  name: 'Play Beach',
   description: 'Whether you like water adventures, relaxing in a wellness pool or keeping yourself in shape by swimming laps: Ghent offers a lot of possibilities to go swimming, both indoors and outdoors. Come on, let’s dive in!.',
   capacity: 100,
   price: 14€,
@@ -230,4 +230,3 @@ if activity10
 else
   puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
 end
-

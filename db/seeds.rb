@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+puts "Creating activities"
+Activity.destroy_all
+
 User.create(
   email: 'michael@test.com',
   username: 'michael',
@@ -227,3 +230,4 @@ if activity10
 else
   puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
 end
+

@@ -6,12 +6,16 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-puts "Creating activities"
+puts "Cleaning activities"
 Activity.destroy_all
+puts "Cleaning users"
+User.destroy_all
 
 puts "success"
 
 User.create(
+  first_name: 'michael',
+  last_name: 'rodriguez',
   email: 'michael@test.com',
   username: 'michael',
   password: '123456'
@@ -19,6 +23,8 @@ User.create(
 puts "success"
 
 User.create(
+  first_name: 'lisa',
+  last_name: 'vanpraat',
   email: 'lisa@test.com',
   username: 'lisa',
   password: '123456'
@@ -36,12 +42,14 @@ activity1 = Activity.create(
   price: 30,
   location: 'Brussels',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 10)
+  end_date: Date.new(2023, 9, 10),
+  category: 'indoor'
 )
+
 if activity1
   activity1.photo.attach(io: file, filename: "babytheek.jpg", content_type: file.content_type)
   puts "activity created successfully!"
-  activity11.save
+  activity1.save
 else
   puts "Failed to create activity: #{activity1.errors.full_messages.join(', ')}"
 end
@@ -55,9 +63,9 @@ activity2 = Activity.create(
   price: 4,
   location: 'Brussels',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 11)
+  end_date: Date.new(2023, 9, 11),
+  category: 'indoor'
 )
-
 if activity2
   activity2.photo.attach(io: file, filename: "treasure.jpg", content_type: file.content_type)
   puts "Activity created successfully!"
@@ -76,9 +84,9 @@ activity3 = Activity.create(
   price: 15,
   location: 'Waterloo',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 12)
+  end_date: Date.new(2023, 9, 12),
+  category: 'indoor'
 )
-
 if activity3
   activity3.photo.attach(io: file, filename: "komini.jpg", content_type: file.content_type)
   puts "Activity created successfully!"
@@ -86,10 +94,8 @@ if activity3
 else
   puts "Failed to create activity: #{activity3.errors.full_messages.join(', ')}"
 end
-
-
-
 #Antwerpen
+
 
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/Plopsa_Station_sh2x1v.jpg")
 activity4 = Activity.create(
@@ -99,7 +105,8 @@ activity4 = Activity.create(
   price: 20,
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 13)
+  end_date: Date.new(2023, 9, 13),
+  category: 'indoor'
 )
 
 if activity4
@@ -118,9 +125,9 @@ activity5 = Activity.create(
   price: 14,
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 7),
-  end_date: Date.new(2023, 9, 10)
+  end_date: Date.new(2023, 9, 10),
+  category: 'indoor'
 )
-
 if activity5
   activity5.photo.attach(io: file, filename: "chocolate-nation.jpg", content_type: file.content_type)
   puts "Activity created successfully!"
@@ -139,7 +146,8 @@ activity6 = Activity.create(
   price: 26,
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 6),
-  end_date: Date.new(2023, 9, 9)
+  end_date: Date.new(2023, 9, 9),
+  category: 'indoor'
 )
 
 if activity6
@@ -160,7 +168,8 @@ activity7 = Activity.create(
   price: 10,
   location: 'Gent',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 10)
+  end_date: Date.new(2023, 9, 10),
+  category: 'outdoor'
 )
 
 if activity7
@@ -181,7 +190,8 @@ activity8 = Activity.create(
   price: 0,
   location: 'Gent',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 17)
+  end_date: Date.new(2023, 9, 17),
+  category: 'outdoor'
 )
 
 if activity8
@@ -213,7 +223,6 @@ end
 #   puts "Failed to create activity: #{activity9.errors.full_messages.join(', ')}"
 # end
 
-
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693318147/splish_splash_xrhfxl.jpg")
 activity10 = Activity.create(
   name: 'Play Beach',
@@ -222,7 +231,8 @@ activity10 = Activity.create(
   price: 14,
   location: 'Gent',
   start_date: Date.new(2023, 9, 2),
-  end_date: Date.new(2023, 9, 3)
+  end_date: Date.new(2023, 9, 3),
+  category: 'outdoor'
 )
 
 if activity10

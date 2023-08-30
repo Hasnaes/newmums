@@ -52,6 +52,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_30_085434) do
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category"
+    t.string "address"
   end
 
   create_table "participations", force: :cascade do |t|

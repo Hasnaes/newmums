@@ -1,1 +1,90 @@
 // Specific CSS for your home-page
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  color: black;
+  margin-left : 60px;
+}
+
+.card-category{
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, .2);
+}
+
+.card-category h1{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-category .location{
+  text-align: center;
+  color: #ffa345;
+}
+
+.card-category .nav-link{
+    background-color: #ffa345;
+    width: 30%;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: .4rem;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.text{
+  overflow: hidden;
+  white-space: normal;
+	margin: 20px;   /* Set the maximum width for the container */  /* Optional: Add a border for better visualization */
+}
+
+.list{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-left: 0;
+}
+
+.list li{
+  font-size: 30px;
+}
+
+// Smallest device
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }

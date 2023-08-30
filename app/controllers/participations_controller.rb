@@ -30,7 +30,6 @@ class ParticipationsController < ApplicationController
     @activity.destroy
     redirect_to activities_path
   end
-end
 
   private
 

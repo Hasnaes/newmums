@@ -9,17 +9,21 @@
 puts "Creating activities"
 Activity.destroy_all
 
+puts "success"
+
 User.create(
   email: 'michael@test.com',
   username: 'michael',
   password: '123456'
 )
+puts "success"
 
 User.create(
   email: 'lisa@test.com',
   username: 'lisa',
   password: '123456'
 )
+puts "success"
 
  #Brussels
 require "open-uri"
@@ -32,8 +36,7 @@ activity1 = Activity.create(
   price: 30,
   location: 'Brussels',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 10),
-  user: User.last
+  end_date: Date.new(2023, 9, 10)
 )
 if activity1
   activity1.photo.attach(io: file, filename: "babytheek.jpg", content_type: file.content_type)
@@ -42,6 +45,7 @@ if activity1
 else
   puts "Failed to create activity: #{activity1.errors.full_messages.join(', ')}"
 end
+puts "success"
 
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/treasure_hunt_nq8rw9.jpg")
 activity2 = Activity.create(
@@ -51,8 +55,7 @@ activity2 = Activity.create(
   price: 4,
   location: 'Brussels',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 11),
-  user: User.last
+  end_date: Date.new(2023, 9, 11)
 )
 
 if activity2
@@ -62,6 +65,8 @@ if activity2
 else
   puts "Failed to create activity: #{activity2.errors.full_messages.join(', ')}"
 end
+puts "success"
+
 
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/komini_pqogco.jpg")
 activity3 = Activity.create(
@@ -71,8 +76,7 @@ activity3 = Activity.create(
   price: 15,
   location: 'Waterloo',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 12),
-  user: User.first
+  end_date: Date.new(2023, 9, 12)
 )
 
 if activity3
@@ -95,8 +99,7 @@ activity4 = Activity.create(
   price: 20,
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 13),
-  user: User.last
+  end_date: Date.new(2023, 9, 13)
 )
 
 if activity4
@@ -115,8 +118,7 @@ activity5 = Activity.create(
   price: 14,
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 7),
-  end_date: Date.new(2023, 9, 10),
-  user: User.last
+  end_date: Date.new(2023, 9, 10)
 )
 
 if activity5
@@ -137,8 +139,7 @@ activity6 = Activity.create(
   price: 26,
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 6),
-  end_date: Date.new(2023, 9, 9),
-  user: User.last
+  end_date: Date.new(2023, 9, 9)
 )
 
 if activity6
@@ -159,8 +160,7 @@ activity7 = Activity.create(
   price: 10,
   location: 'Gent',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 10),
-  user: User.last
+  end_date: Date.new(2023, 9, 10)
 )
 
 if activity7
@@ -181,8 +181,7 @@ activity8 = Activity.create(
   price: 0,
   location: 'Gent',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 17),
-  user: User.last
+  end_date: Date.new(2023, 9, 17)
 )
 
 if activity8
@@ -223,8 +222,7 @@ activity10 = Activity.create(
   price: 14,
   location: 'Gent',
   start_date: Date.new(2023, 9, 2),
-  end_date: Date.new(2023, 9, 3),
-  user: User.last
+  end_date: Date.new(2023, 9, 3)
 )
 
 if activity10

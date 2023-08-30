@@ -1,6 +1,4 @@
 class ParticipationsController < ApplicationController
-  before_action :set_activity, except: :my_dashboard
-
   def index
     @activities = Activity.all
     if params[:query].present?
@@ -11,11 +9,11 @@ class ParticipationsController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
-    @participation = participation.new
+    @participation = Participation.new
     @markers = [
       {
         lat: @activity.latitude,
-        lng: @activityt.longitude,
+        lng: @activity.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: { activity: @activity }),
         marker_html: render_to_string(partial: "marker", locals: { activity: @activity }),
       }
@@ -37,7 +35,7 @@ end
   private
 
   def set_activity
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.find(params[:id])
   end
 
   def participation_params

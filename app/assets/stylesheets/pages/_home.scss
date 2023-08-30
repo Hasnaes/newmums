@@ -5,11 +5,12 @@
   grid-gap: 10px;
   color: black;
   margin-left : 60px;
+  border-radius: 10px 10px;
 }
 
 .card-category{
   width: 300px;
-  height: 300px;
+  height: 400px;
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, .2);
 }
 
@@ -33,12 +34,19 @@
     border-radius: .4rem;
     cursor: pointer;
     margin: 0 auto;
+    margin-top: 50px;
+}
+
+.cards ul {
+  padding: 0;
 }
 
 .text{
   overflow: hidden;
-  white-space: normal;
-	margin: 20px;   /* Set the maximum width for the container */  /* Optional: Add a border for better visualization */
+  white-space: nowrap;
+  font-size: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .list{
@@ -50,9 +58,23 @@
   padding-left: 0;
 }
 
+.list .price {
+  display: block;
+}
+
+.list .price p {
+  color:#3b2747;
+}
+
+.list .capacity p {
+  color:#3b2747;
+}
+
 .list li{
   font-size: 30px;
+  font-weight: 600;
 }
+
 
 // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {

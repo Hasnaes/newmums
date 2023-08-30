@@ -13,15 +13,25 @@
     </div>
   <% end %>
 </div>
+
   <div class="cards">
       <% @activities.each do |activity| %>
         <div class= "card-category">
           <p style="background-color: #3b2747; height: 100px;">Hello</p>
           <h1><%= activity.name %></h1>
           <p class="location"><%= activity.location %></p>
-          <ul class= "list">
-            <li><%= activity.price %>€</li>
-            <li><%= activity.capacity %>👤</li>
+          <ul>
+            <div class= "list">
+              <div class="price">
+            <li><%= activity.price %></li>
+              <p>euros</p>
+              </div>
+              <div class="capacity">
+            <li><%= activity.capacity %></li>
+              <p>capacity</p>
+              </div>
+            </div>
+            <li class="text"><%= activity.description %></li>
           </ul>
           <%= link_to "See more", "/home", class: "nav-link" %>
           </div>

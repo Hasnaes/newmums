@@ -5,13 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Message.destroy_all
+puts "Cleaning Messages"
 
-puts "Cleaning activities"
+Chatroom.destroy_all
+puts "Cleaning Chatroom"
 Activity.destroy_all
 puts "Cleaning users"
 User.destroy_all
 
 puts "success"
+
 
 User.create!(
   first_name: 'michael',
@@ -55,6 +59,8 @@ else
 end
 puts "success"
 
+Chatroom.create!(name: 'Babytheek', activity: activity1)
+
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/treasure_hunt_nq8rw9.jpg")
 activity2 = Activity.create!(
   name: 'Treasure Hunt',
@@ -75,6 +81,7 @@ else
 end
 puts "success"
 
+Chatroom.create!(name: 'Treasure Hunt', activity: activity2)
 
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/komini_pqogco.jpg")
 activity3 = Activity.create!(
@@ -94,6 +101,9 @@ if activity3
 else
   puts "Failed to create! activity: #{activity3.errors.full_messages.join(', ')}"
 end
+
+Chatroom.create!(name: 'Komini Waterloo', activity: activity3)
+
 #Antwerpen
 
 
@@ -116,6 +126,8 @@ if activity4
 else
   puts "Failed to create! activity: #{activity4.errors.full_messages.join(', ')}"
 end
+
+Chatroom.create!(name:'Plopsa Station', activity: activity4)
 
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/chocolate_nation_ilj2lg.jpg")
 activity5 = Activity.create!(

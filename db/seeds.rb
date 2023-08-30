@@ -28,8 +28,10 @@ User.create(
 )
 
  #Brussels
+require "open-uri"
 
-Activity.create(
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316351/Babytheek_logo_dkgax9.png")
+activity1 = Activity.create(
   name: 'Babytheek_Laeken',
   description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
   capacity: 15,
@@ -38,17 +40,18 @@ Activity.create(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 10),
   category: 'indoor'
-  # user: User.last
 )
-# if activity1
-#   puts "activity created successfully!"
-#   activity11.save
-# else
-#   puts "Failed to create activity: #{activity1.errors.full_messages.join(', ')}"
-# end
 
+if activity1
+  activity1.photo.attach(io: file, filename: "babytheek.jpg", content_type: file.content_type)
+  puts "activity created successfully!"
+  activity1.save
+else
+  puts "Failed to create activity: #{activity1.errors.full_messages.join(', ')}"
+end
 
-Activity.create(
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/treasure_hunt_nq8rw9.jpg")
+activity2 = Activity.create(
   name: 'Treasure Hunt',
   description: 'Every child receives a backpack with the equipment to complete missions (treasure map, fancy dress, puzzle, flashlight,...). Every mission gives an indication to find the password that will allow them to reach the treasure chest (where the famous collar of the golden fleece is).The children receive a little gift at the end of the game. Duration: 1h to 1h30',
   capacity: 10,
@@ -57,18 +60,17 @@ Activity.create(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 11),
   category: 'indoor'
-  # user: User.last
 )
+if activity2
+  activity2.photo.attach(io: file, filename: "treasure.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity2.save
+else
+  puts "Failed to create activity: #{activity2.errors.full_messages.join(', ')}"
+end
 
-# if activity2
-#   activity2.photo.attach(io: file, filename: "boat2.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity2.save
-# else
-#   puts "Failed to create activity: #{boat2.errors.full_messages.join(', ')}"
-# end
-
-Activity.create(
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/komini_pqogco.jpg")
+activity3 = Activity.create(
   name: 'Komini Waterloo',
   description: 'Enter KOMINI and enjoy a unique, immersive parent-child experience. Much more than an indoor playground, its a wonderland of dreams that breaks down the boundaries of imagination between adults and kids.',
   capacity: 30,
@@ -77,20 +79,19 @@ Activity.create(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 12),
   category: 'indoor'
-  # user: User.first
 )
-
-# if activity3
-#   activity3.photo.attach(io: file, filename: "boat3.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity3.save
-# else
-#   puts "Failed to create activity: #{activity3.errors.full_messages.join(', ')}"
-# end
-
+if activity3
+  activity3.photo.attach(io: file, filename: "komini.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity3.save
+else
+  puts "Failed to create activity: #{activity3.errors.full_messages.join(', ')}"
+end
 #Antwerpen
 
-Activity.create(
+
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/Plopsa_Station_sh2x1v.jpg")
+activity4 = Activity.create(
   name: 'Plopsa Station',
   description: 'Plopsa is the theme park division of Studio 100, the company operates 8 parks across Belgium, The Netherlands, Germany and Poland. Gert Verhulst as Gert in Plopsaland.',
   capacity: 100,
@@ -99,18 +100,18 @@ Activity.create(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 13),
   category: 'indoor'
-  # user: User.last
 )
 
-# if activity4
-#   activity4.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity4.save
-# else
-#   puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
-# end
+if activity4
+  activity4.photo.attach(io: file, filename: "Plopsa.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity4.save
+else
+  puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
+end
 
-Activity.create(
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/chocolate_nation_ilj2lg.jpg")
+activity5 = Activity.create(
   name: 'Chocolate Nation',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
   capacity: 100,
@@ -119,18 +120,19 @@ Activity.create(
   start_date: Date.new(2023, 9, 7),
   end_date: Date.new(2023, 9, 10),
   category: 'indoor'
-  # user: User.last
 )
+if activity5
+  activity5.photo.attach(io: file, filename: "chocolate-nation.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity5.save
+else
+  puts "Failed to create activity: #{activity5.errors.full_messages.join(', ')}"
+end
 
-# if activity5
-#   activity5.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity5.save
-# else
-#   puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
-# end
 
-Activity.create(
+
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317659/zoo_antwerp_zd8ld5.jpg")
+activity6 = Activity.create(
   name: 'Antwerpen Zoo',
   description: 'Antwerp Zoo is a zoo in the centre of Antwerp, Belgium, located next to the Antwerpen-Centraal railway station. It is the oldest animal park in the country, and one of the oldest in the world, established on 21 July 1843.',
   capacity: 100,
@@ -139,20 +141,20 @@ Activity.create(
   start_date: Date.new(2023, 9, 6),
   end_date: Date.new(2023, 9, 9),
   category: 'indoor'
-  # user: User.last
 )
 
-# if activity6
-#   activity6.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity6.save
-# else
-#   puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
-# end
+if activity6
+  activity6.photo.attach(io: file, filename: "antwerp-zoo.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity6.save
+else
+  puts "Failed to create activity: #{activity6.errors.full_messages.join(', ')}"
+end
 
 #Gent
 
-Activity.create(
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317760/pretland_dxz4lf.jpg")
+activity7 = Activity.create(
   name: 'Pretland Gent,',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
   capacity: 100,
@@ -161,18 +163,20 @@ Activity.create(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 10),
   category: 'outdoor'
-  # user: User.last
 )
 
-# if activity7
-#   activity7.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity7.save
-# else
-#   puts "Failed to create activity: #{activity7.errors.full_messages.join(', ')}"
-# end
+if activity7
+  activity7.photo.attach(io: file, filename: "pretland.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity7.save
+else
+  puts "Failed to create activity: #{activity7.errors.full_messages.join(', ')}"
+end
 
-Activity.create(
+
+
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317902/blaarmeersen_hbgpaa.jpg")
+activity8 = Activity.create(
   name: 'Blaarmeersen',
   description: 'Blaarmeersen Sports and Recreation Park is a green jewel beside the Watersportbaan in Ghent. This is where Ghent residents come jogging, and rowing clubs battle it out on the water. The Watersportbaan in Ghent is also the setting for many festivals and activities for people of all ages.',
   capacity: 100,
@@ -181,29 +185,28 @@ Activity.create(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 17),
   category: 'outdoor'
-  # user: User.last
 )
 
-# if activity8
-#   activity8.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity8.save
-# else
-#   puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
-# end
+if activity8
+  activity8.photo.attach(io: file, filename: "blaarmeersen.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity8.save
+else
+  puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
+end
 
 
-Activity.create(
-  name: '',
-  description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
-  capacity: 100,
-  price: 14,
-  location: 'Antwerpen',
-  start_date: Date.new(2023, 9, 5),
-  end_date: Date.new(2023, 9, 6),
-  category: 'outdoor'
-  # user: User.last
-)
+# file = URI.open("")
+# activity9 = Activity.create(
+#   name: '',
+#   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
+#   capacity: 100,
+#   price: 14,
+#   location: 'Antwerpen',
+#   start_date: Date.new(2023, 9, 5),
+#   end_date: Date.new(2023, 9, 6),
+#   user: User.last
+# )
 
 # if activity9
 #   activity9.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
@@ -213,7 +216,8 @@ Activity.create(
 #   puts "Failed to create activity: #{activity9.errors.full_messages.join(', ')}"
 # end
 
-Activity.create(
+file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693318147/splish_splash_xrhfxl.jpg")
+activity10 = Activity.create(
   name: 'Splish Splash',
   description: 'Whether you like water adventures, relaxing in a wellness pool or keeping yourself in shape by swimming laps: Ghent offers a lot of possibilities to go swimming, both indoors and outdoors. Come on, let’s dive in!.',
   capacity: 100,
@@ -222,13 +226,12 @@ Activity.create(
   start_date: Date.new(2023, 9, 2),
   end_date: Date.new(2023, 9, 3),
   category: 'outdoor'
-  # user: User.last
 )
 
-# if activity10
-#   activity10.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity10.save
-# else
-#   puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
-# end
+if activity10
+  activity10.photo.attach(io: file, filename: "splish-splash.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity10.save
+else
+  puts "Failed to create activity: #{activity4.errors.full_messages.join(', ')}"
+end

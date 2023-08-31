@@ -3,7 +3,6 @@ class ActivitiesController < ApplicationController
 
   def index
     @activities = Activity.all
-
     if params[:query].present?
       sql_subquery = "location ILIKE :query OR address ILIKE :query OR category ILIKE :query"
       @activities = @activities.where(sql_subquery, query: "%#{params[:query]}%")

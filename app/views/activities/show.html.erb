@@ -1,52 +1,37 @@
-<main class="container">
-  <!-- Right Column -->
-  <div class="right-column">
+<%= render "shared/topnavbar" %>
+<!------ Include the above in your HEAD tag ---------->
 
-    <!-- Product Description -->
-    <div>
-      <span><%= @activity.location %></span>
-      <h1><%= @activity.name %></h1>
-      <p class="text-align: justify;"><%= @activity.description %></p>
-    </div>
-
-    <!-- Product Configuration -->
-    <div class="product-configuration">
-
-      <!-- Product Color -->
-      <div class="product-color">
-        <span><%= @activity.category%></span>
-
-        <%# <div class="color-choose"> %>
-          <%# <div> %>
-            <%# <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-            <label for="red"><span></span></label> %>
-          <%# </div> %>
-          <%# <div>
-            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
-            <label for="blue"><span></span></label>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<div class="container-fluid" id="containershow">
+  <div>
+    <div class="col-10" style="">
+      <div class="card text-center">
+        <%= cl_image_tag @activity.photo.key%>
+        <div class="card-body">
+          <h5 class="card-title"><%= @activity.name %></h5>
+          <hr>
+          <p>
+            <a class="btnmap" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fas fa-map" style="color: #f2ad73;"></i> Maps
+            </a>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
           </div>
-          <div>
-            <input data-image="black" type="radio" id="black" name="color" value="black">
-            <label for="black"><span></span></label>
-          </div> %>
-        <%# </div> %>
-
-      </div>
-
-      <!-- Cable Configuration -->
-      <div class="cable-config">
-        <span>Cable configuration</span>
-
-        <div class="cable-choose">
-<p><%= @activity.start_date %></p>
-<p><%= @activity.end_date %></p>
         </div>
-        <%= link_to "Read more about this activity", @activity.link%>
+        <div class="card-footer text-muted">
+          <div class="row">
+            <div class="col">
+              <a href="/activities"><i class="fa-solid fa-plus" style="color: #f2ad73;"></i>Participate</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Left Column / Headphones Image -->
-  <div class="left-column">
-    <%= cl_image_tag @activity.photo.key, width: 500, height: 450, crop: :fill%>
   </div>
-</main>
+  <div class="moreinfos">
+    <%= @activity.description %>
+  </div>
+</div>

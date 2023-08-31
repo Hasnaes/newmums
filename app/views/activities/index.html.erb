@@ -1,10 +1,16 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Amatic+SC&family=Assistant:wght@500&family=Cardo&family=Cormorant+Garamond:wght@300&family=Figtree:wght@500&family=Montserrat:wght@200;300;400;500;600&family=Open+Sans:wght@300&family=Raleway:wght@300;400&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
-
+<%# <div><%= render "shared/search" %>
+<%= render "shared/navbar" %>
+  <div class="cities">
+  <%= button_to "Antwerpen", activities_path, params: {where: "Antwerpen"}, method: :get, class: "btn text-white" %>
+  <%= button_to "Brussels", activities_path, params: {where: "Brussels"}, method: :get, class: "btn btn-primary" %>
+  <%= button_to "Wallonie", activities_path, params: {where: "Wallonie"}, method: :get, class: "btn btn-primary" %>
+  <%= button_to "Gent", activities_path, params: {where: "Gent"}, method: :get, class: "btn btn-primary" %>
+  <%= button_to "Discover ALL", activities_path, params: {where: "all"}, method: :get, class: "btn btn-primary" %>
+  </div>
+<div class="cards-container">
   <div class="cards">
       <% @activities.each do |activity| %>
-              <%= link_to activity_path(activity) do %>
+        <%= link_to activity_path(activity) do %>
           <div class= "card-category">
             <%= cl_image_tag activity.photo.key, width: 300, height: 150, crop: :fill%>
             <h1><%= activity.name %></h1>
@@ -32,3 +38,10 @@
         <% end %>
       <% end %>
   </div>
+
+    <div class="map" style="width: 50%; height: 100vh;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

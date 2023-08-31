@@ -1,0 +1,7 @@
+<%= link_to activity_path(activity) do %>
+  <div class="pins">
+    <h2><%= activity.name %></h2>
+    <p><%= activity.address %></p>
+    <%= cl_image_tag activity.photo.key, width: 100, height: 75, crop: :fill%>
+  </div>
+<% end %>

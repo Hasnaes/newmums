@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :activities, only: [:index, :show] do
     resources :participations, only: [:create]
       end
+  
   get "my_dashboard", to: "participations#my_dashboard"
   resources :participations, only: [:destroy]
   resources :chatrooms, only: :show do

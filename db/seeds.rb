@@ -48,7 +48,8 @@ activity1 = Activity.create!(
   location: 'Brussels',
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 10),
-  category: 'indoor'
+  category: 'indoor',
+  link: "https://babytheeknekkersdal.myturn.com/library/"
 )
 
 if activity1
@@ -72,7 +73,8 @@ activity2 = Activity.create!(
   location: 'Brussels',
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 11),
-  category: 'indoor'
+  category: 'indoor',
+  link: "http://www.waterloo-tourisme.com/en/battlefield-waterloo-treasure-hunt"
 )
 if activity2
   activity2.photo.attach(io: file, filename: "treasure.jpg", content_type: file.content_type)
@@ -90,12 +92,13 @@ activity3 = Activity.create!(
   name: 'Komini Waterloo',
   description: 'Enter KOMINI and enjoy a unique, immersive parent-child experience. Much more than an indoor playground, its a wonderland of dreams that breaks down the boundaries of imagination between adults and kids.',
   capacity: 30,
-  address: "Drève Richelle 22, 1410 Waterloo",
+  address: "Drève Richelle 22, 1410 Waterloo, belgium",
   price: 15,
-  location: 'Waterloo',
+  location: 'Wallonie',
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 12),
-  category: 'indoor'
+  category: 'indoor',
+  link: "https://komini.be/en/"
 )
 if activity3
   activity3.photo.attach(io: file, filename: "komini.jpg", content_type: file.content_type)
@@ -120,7 +123,8 @@ activity4 = Activity.create!(
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 13),
-  category: 'indoor'
+  category: 'indoor',
+  link: "https://www.plopsastationantwerp.be/fr"
 )
 
 if activity4
@@ -143,7 +147,8 @@ activity5 = Activity.create!(
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 7),
   end_date: Date.new(2023, 9, 10),
-  category: 'indoor'
+  category: 'indoor',
+  link: "https://www.chocolatenation.be/fr"
 )
 if activity5
   activity5.photo.attach(io: file, filename: "chocolate-nation.jpg", content_type: file.content_type)
@@ -165,7 +170,8 @@ activity6 = Activity.create!(
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 6),
   end_date: Date.new(2023, 9, 9),
-  category: 'indoor'
+  category: 'indoor',
+  link: "https://www.zooantwerpen.be/fr/tickets-dentree/?gclid=Cj0KCQjw9MCnBhCYARIsAB1WQVVMT1w4O5tL9JPanCltQLbLgitf3RuLYPjyefCYjv1bubB_dMMHTX0aAsp5EALw_wcB"
 )
 
 if activity6
@@ -180,7 +186,7 @@ end
 
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317760/pretland_dxz4lf.jpg")
 activity7 = Activity.create!(
-  name: 'Pretland Gent,',
+  name: 'Pretland Gent',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
   capacity: 100,
   address: "Hurstweg 8 Galveston, 9000 Gent",
@@ -188,7 +194,8 @@ activity7 = Activity.create!(
   location: 'Gent',
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 10),
-  category: 'outdoor'
+  category: 'outdoor',
+  link: "https://www.ballorig.be/"
 )
 
 if activity7
@@ -211,7 +218,8 @@ activity8 = Activity.create!(
   location: 'Gent',
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 17),
-  category: 'outdoor'
+  category: 'outdoor',
+  link: "https://stad.gent/nl/blaarmeersen"
 )
 
 if activity8
@@ -253,7 +261,8 @@ activity10 = Activity.create!(
   location: 'Gent',
   start_date: Date.new(2023, 9, 2),
   end_date: Date.new(2023, 9, 3),
-  category: 'outdoor'
+  category: 'outdoor',
+  link: "https://www.playbeach.eu/"
 )
 
 if activity10

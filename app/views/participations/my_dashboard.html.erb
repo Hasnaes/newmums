@@ -1,0 +1,30 @@
+<h1>Activity Information</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Location</th>
+      <th>Capacity</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= link_to activity.name, activity_path(activity) %></td>
+        <td><%= activity.category %></td>
+        <td><%= activity.price %></td>
+        <td><%= activity.location %></td>
+        <td><%= activity.capacity %></td>
+        <td><%= activity.start_date %>
+        <%= link_to participation_path(activity.participations.find_by(user: current_user)),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <i class="fa-solid fa-trash-can"></i>
+        <% end %>
+        </td>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

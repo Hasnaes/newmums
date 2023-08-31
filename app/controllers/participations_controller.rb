@@ -1,7 +1,8 @@
 class ParticipationsController < ApplicationController
   def create
     @participation = Participation.new
-    @participation.activity = Activity.find(params[:activity_id])
+    @activity = Activity.find(params[:activity_id])
+    @participation.activity = @activity
     @participation.user = current_user
 
     if @participation.save
@@ -11,9 +12,15 @@ class ParticipationsController < ApplicationController
     end
   end
 
+  def my_dashboard
+    @participations = Participation.where(user: current_user)
+    @activities = @participations.map{ |participation| participation.activity}
+  end
+
   def destroy
     @participation = Participation.find_by(id: params[:id])
-    @participation.destroy
-    redirect_to activities_path, notice: 'Participation was successfully cancelled.'
+    if @participation.destroy
+      redirect_to activities_path, notice: 'Participation was successfully cancelled.'
+    end
   end
 end

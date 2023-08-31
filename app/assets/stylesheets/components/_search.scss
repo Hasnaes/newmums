@@ -1,7 +1,9 @@
 .search-form-control {
   position: relative;
-  width: 50%;
+  width: 40%;
   margin-bottom: 20px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .search-form-control .btn {
@@ -12,12 +14,18 @@
   background-color: #3b2747;
   color: white;
   border-radius: 30px;
+
+  &:hover{
+    opacity: 0.7;
+    transition: all 0.2s ease-out;
+  }
 }
 
 .search-form-control .form-control {
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
+  background-color: #62418529;
 }
 
 .search-form-control .form-control:focus {

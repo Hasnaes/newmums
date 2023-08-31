@@ -1,7 +1,52 @@
-<h2><%= @activity.name %></h2>
-<p><%= @activity.description %></p>
-<p><%= @activity.price %></p>
+<main class="container">
+  <!-- Right Column -->
+  <div class="right-column">
+
+    <!-- Product Description -->
+    <div>
+      <span><%= @activity.location %></span>
+      <h1><%= @activity.name %></h1>
+      <p class="text-align: justify;"><%= @activity.description %></p>
+    </div>
+
+    <!-- Product Configuration -->
+    <div class="product-configuration">
+
+      <!-- Product Color -->
+      <div class="product-color">
+        <span><%= @activity.category%></span>
+
+        <%# <div class="color-choose"> %>
+          <%# <div> %>
+            <%# <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+            <label for="red"><span></span></label> %>
+          <%# </div> %>
+          <%# <div>
+            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+            <label for="blue"><span></span></label>
+          </div>
+          <div>
+            <input data-image="black" type="radio" id="black" name="color" value="black">
+            <label for="black"><span></span></label>
+          </div> %>
+        <%# </div> %>
+
+      </div>
+
+      <!-- Cable Configuration -->
+      <div class="cable-config">
+        <span>Cable configuration</span>
+
+        <div class="cable-choose">
 <p><%= @activity.start_date %></p>
 <p><%= @activity.end_date %></p>
-<p><%= @activity.capacity %></p>
-<p><%= @activity.location %></p>
+        </div>
+        <%= link_to "Read more about this activity", @activity.link%>
+      </div>
+    </div>
+
+    <!-- Left Column / Headphones Image -->
+  <div class="left-column">
+    <%= cl_image_tag @activity.photo.key, width: 500, height: 450, crop: :fill%>
+  </div>
+</main>

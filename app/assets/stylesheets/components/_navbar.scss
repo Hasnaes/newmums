@@ -1,5 +1,4 @@
 .navbar-lewagon {
-  justify-content: space-between;
   height: 500px;
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('./bannerpic.jpeg');
   background-repeat: no-repeat;
@@ -11,10 +10,11 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.img {
   width: 250px;
   margin: 0 auto;
   align-items: center;
+  margin-right: 100px;
 }
 
 .logo{

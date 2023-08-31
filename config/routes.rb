@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :activities, only: [:index, :show] do
     resources :participations, only: [:create]
       end
+
   resources :participations, only: [:destroy]
   resources :chatrooms, only: :show do
     resources :messages, only: :create

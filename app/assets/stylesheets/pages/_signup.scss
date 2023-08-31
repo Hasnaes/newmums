@@ -1,0 +1,59 @@
+
+
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+
+}
+
+h2 {
+  font-weight: bold;
+}
+
+
+.master-cont-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.card-signup {
+  border: 1px solid #ccc;
+
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  height: 120%;
+}
+
+
+.content-container-signup{
+  display: flex;
+}
+
+.image-container-signup {
+  flex: 1;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.form-container-signup {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: auto;
+}
+
+
+.signin-image-signup {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Your existing styles for .login and other elements */

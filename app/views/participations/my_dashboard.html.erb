@@ -1,16 +1,20 @@
 <%= render "shared/topnavbar" %>
 
-<h1>Activity Information</h1>
-<table>
+<h1>My Activites</h1>
+
+<div>
+  <table class = "mytable">
+
   <thead>
     <tr>
-      <th>Activity</th>
+      <th>Activity </th>
       <th>Category</th>
       <th>Price</th>
       <th>Location</th>
       <th>Capacity</th>
       <th>Date</th>
-      <th>Link</th>
+      <th>Chatoom</th>
+      <th>Cancel</th>
     </tr>
   </thead>
   <tbody>
@@ -21,13 +25,16 @@
         <td><%= activity.price %></td>
         <td><%= activity.location %></td>
         <td><%= activity.capacity %></td>
-        <td><%= activity.start_date %>
-        <%= link_to participation_path(activity.participations.find_by(user: current_user)),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-          <i class="fa-solid fa-trash-can"></i>
+        <td><%= activity.start_date %></td>
+        <td><%= link_to chatroom_path(activity.chatroom) do %>
+          <i class="fa-solid fa-link"></i>
         <% end %></td>
-        <td><%= link_to "my chatroom", chatroom_path(activity.chatroom)  %>
+        <td><%= link_to participation_path(activity.participations.find_by(user: current_user)),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <i class="fa-solid fa-trash-can"></i>
+        <% end %></td>
         </tr>
 
     <% end %>
   </tbody>
-</table>
+  </table>
+<div>

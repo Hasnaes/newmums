@@ -6,9 +6,9 @@ class ParticipationsController < ApplicationController
     @participation.user = current_user
 
     if @participation.save
-      redirect_to activities_path, notice: 'Participation was successfully created.'
+      redirect_to my_dashboard_path, notice: 'Participation was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render 'activities/show', status: :unprocessable_entity
     end
   end
 

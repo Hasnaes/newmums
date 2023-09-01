@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Participation.destroy_all
+puts "Cleaning Participation"
+
 Message.destroy_all
 puts "Cleaning Messages"
 
@@ -169,7 +172,7 @@ else
   puts "Failed to create! activity: #{activity4.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name:'Plopsa Station', activity: activity4)
+Chatroom.create!(name: 'Plopsa Station', activity: activity4)
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/chocolate_nation_ilj2lg.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561412/chocolatenation3_yqn771.jpg")
@@ -198,7 +201,7 @@ else
   puts "Failed to create! activity: #{activity5.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name:'Chocolate Nation', activity: activity5)
+Chatroom.create!(name: 'Chocolate Nation', activity: activity5)
 
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317659/zoo_antwerp_zd8ld5.jpg")
@@ -229,7 +232,7 @@ else
   puts "Failed to create! activity: #{activity6.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name:'Antwerpen Zoon', activity: activity6)
+Chatroom.create!(name: 'Antwerpen Zoo', activity: activity6)
 
 
 #Gent
@@ -262,8 +265,7 @@ else
   puts "Failed to create! activity: #{activity7.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name:'Pretland Gent', activity: activity7)
-
+Chatroom.create!(name: 'Pretland Gent', activity: activity7)
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317902/blaarmeersen_hbgpaa.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/blasmeeran3_qsaevl.jpg")
@@ -293,13 +295,34 @@ else
   puts "Failed to create! activity: #{activity8.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name:'Blaarmeersen', activity: activity8)
+Chatroom.create!(name: 'Blaarmeersen', activity: activity8)
+
+file = URI.open("")
+activity9 = Activity.create!(
+  name: 'Chocolate Nation',
+  description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
+  capacity: 100,
+  price: 14,
+  location: 'Antwerpen',
+  start_date: Date.new(2023, 9, 5),
+  end_date: Date.new(2023, 9, 6),
+  user: User.last
+)
+
+if activity9
+  activity9.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
+  puts "Activity created successfully!"
+  activity9.save
+else
+  puts "Failed to create! activity: #{activity9.errors.full_messages.join(', ')}"
+end
+
+Chatroom.create!(name: 'Chocolate Nation', activity: activity9)
 
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693318147/splish_splash_xrhfxl.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562783/splishsplash3_rwelop.jpg")
 file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562783/splishsplash2_psks86.jpg")
-
 
 activity10 = Activity.create!(
   name: 'Play Beach',

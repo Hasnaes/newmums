@@ -243,28 +243,27 @@ Chatroom.create!(name: 'Blaarmeersen', activity: activity8)
 
 
 
-file = URI.open("")
-activity9 = Activity.create!(
-  name: 'Chocolate Nation',
-  description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
-  capacity: 100,
-  price: 14,
-  location: 'Antwerpen',
-  start_date: Date.new(2023, 9, 5),
-  end_date: Date.new(2023, 9, 6),
-  user: User.last
-)
+# file = URI.open("")
+# activity9 = Activity.create!(
+#   name: 'Het Paleis',
+#   description: 'This is an imaginative city theatre where most productions are aimed at children. The programme includes plays, readings and concerts. Children who share the same name as the director of the performance get admitted free..',
+#   capacity: 100,
+#   price: 14,
+#   location: 'Antwerpen',
+#   start_date: Date.new(2023, 9, 5),
+#   end_date: Date.new(2023, 9, 6),
+#   user: User.last
+# )
 
-if activity9
-  activity9.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
-  puts "Activity created successfully!"
-  activity9.save
-else
-  puts "Failed to create! activity: #{activity9.errors.full_messages.join(', ')}"
-end
+# if activity9
+#   activity9.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
+#   puts "Activity created successfully!"
+#   activity9.save
+# else
+#   puts "Failed to create! activity: #{activity9.errors.full_messages.join(', ')}"
+# end
 
-Chatroom.create!(name: 'Chocolate Nation', activity: activity9)
-
+# Chatroom.create!(name: 'Chocolate Nation', activity: activity9)
 
 file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693318147/splish_splash_xrhfxl.jpg")
 activity10 = Activity.create!(

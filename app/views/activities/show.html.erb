@@ -24,7 +24,7 @@
         <div class="card-footer text-muted">
           <div class="row">
             <div class="col">
-              <a href="/activities"><i class="fa-solid fa-plus" style="color: #f2ad73;"></i>Participate</a>
+              <%= link_to '➕ Participation', activity_participations_path(@activity), data: {turbo_method: :post}%>
             </div>
           </div>
         </div>

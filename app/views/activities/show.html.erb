@@ -6,7 +6,7 @@
   <div>
     <div>
       <div class="card-show text-center">
-        <%= cl_image_tag @activity.photo.key, width: 600, height: 300%>
+        <%= cl_image_tag @activity.photos.first.key, width: 600, height: 300%>
         <div class="card-body">
           <h5 class="card-title"><%= @activity.name %></h5>
           <hr>

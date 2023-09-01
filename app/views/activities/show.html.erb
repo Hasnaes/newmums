@@ -41,7 +41,7 @@
     <i class="fa-solid fa-location-pin" style="color: #f2ad73;"></i>  <%= @activity.address %> <hr>
 
   <div class="d-none" data-toggle-map-target="map">
-      <div class="mapshow" style="width: 6000px; height: 150px;"
+      <div class="mapshow" style="width: 600px; height: 250px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

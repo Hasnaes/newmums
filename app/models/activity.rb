@@ -6,9 +6,6 @@ class Activity < ApplicationRecord
 
   has_many :participations
 
-  geocoded_by :location
-  after_validation :geocode, if: :will_save_change_to_location?
-
   validates :name, presence: true
   validates :description, presence: true, length: { minimum: 40 }
   validates :capacity, presence: true, numericality: { only_integer: true, greater_than: 0 }

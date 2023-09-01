@@ -3,10 +3,17 @@
     <div class="container-fluid d-block">
       <p style="color:white; font-size: 30px; font-weight: 600; margin-left: 150px;">Nurturing New Moms Beyond Motherhood</p>
       <div class=" mainbuttons d-flex">
-        <button><%= link_to "DISCOVER ALL", activities_path %></button>
+        <button><%= link_to "DISCOVER ALL", "#toppage" %></button>
         <button><%= link_to "CONNECT", new_user_session_path %></button>
       </div>
+      <div class="cities" >
+        <%= button_to "Antwerpen", "#toppage", params: {where: "Antwerpen"}, method: :get, class: "btn text-white" %>
+        <%= button_to "Brussels", "#toppage", params: {where: "Brussels"}, method: :get, class: "btn btn-primary" %>
+        <%= button_to "Wallonie", "#toppage", params: {where: "Wallonie"}, method: :get, class: "btn btn-primary" %>
+        <%= button_to "Gent", "#toppage", params: {where: "Gent"}, method: :get, class: "btn btn-primary" %>
+        <%= button_to "Discover ALL", "#toppage", params: {where: "all"}, method: :get, class: "btn btn-primary" %>
+      </div>
     </div>
-    <%= image_tag "new.png", class: "img" %>
+      <%= image_tag "new.png", class: "img" %>
   </div>
 </div>

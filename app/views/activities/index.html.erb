@@ -1,13 +1,7 @@
 <%# <div><%= render "shared/search" %>
 <%= render "shared/navbar" %>
-  <div class="cities">
-  <%= button_to "Antwerpen", activities_path, params: {where: "Antwerpen"}, method: :get, class: "btn text-white" %>
-  <%= button_to "Brussels", activities_path, params: {where: "Brussels"}, method: :get, class: "btn btn-primary" %>
-  <%= button_to "Wallonie", activities_path, params: {where: "Wallonie"}, method: :get, class: "btn btn-primary" %>
-  <%= button_to "Gent", activities_path, params: {where: "Gent"}, method: :get, class: "btn btn-primary" %>
-  <%= button_to "Discover ALL", activities_path, params: {where: "all"}, method: :get, class: "btn btn-primary" %>
-  </div>
-<div class="cards-container">
+
+<div class="cards-container" id="toppage">
   <div class="cards">
       <% @activities.each do |activity| %>
         <%= link_to activity_path(activity) do %>

@@ -27,7 +27,7 @@
           <div class="row">
             <div class="col">
               <i class="fa-solid fa-plus" style="color: #f2ad73;"></i>
-              <%= link_to "Participate", my_dashboard_path(@activity) %>
+              <%= link_to "Participate", participation_path(@activity) %>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@
     <i class="fa-solid fa-location-pin" style="color: #f2ad73;"></i>  <%= @activity.address %> <hr>
 
   <div class="d-none" data-toggle-map-target="map">
-      <div class="mapshow" style="width: 600px; height: 250px;"
+      <div class="mapshow" style="width: 400px; height: 250px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

@@ -8,6 +8,7 @@
       <th>Location</th>
       <th>Capacity</th>
       <th>Date</th>
+      <th>Link</th>
     </tr>
   </thead>
   <tbody>
@@ -21,10 +22,10 @@
         <td><%= activity.start_date %>
         <%= link_to participation_path(activity.participations.find_by(user: current_user)),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
           <i class="fa-solid fa-trash-can"></i>
-        <% end %>
-        </td>
-        </td>
-      </tr>
+        <% end %></td>
+        <td><%= link_to "my chatroom", chatroom_path(activity.chatroom)  %>
+        </tr>
+
     <% end %>
   </tbody>
 </table>

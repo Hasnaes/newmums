@@ -1,5 +1,6 @@
 .navbarr-lewagon {
   justify-content: space-between;
+  margin-top: 0;
 }
 
 #navbarSupportedContent {
@@ -8,4 +9,16 @@
 
 .navbarr-lewagon .navbarr-brand .logotop {
   width: 100px;
+}
+
+#topnavbar{
+  padding-top: 0;
+}
+
+.nav-item .fa-solid{
+  width: 100px;
+}
+
+.sidemenu a{
+  color:#ffa345;
 }

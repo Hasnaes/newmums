@@ -1,22 +1,24 @@
 <%= render "shared/topnavbar" %>
 <!------ Include the above in your HEAD tag ---------->
+<div id="totalcontainer" data-controller="toggle-map">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-<div class="container-fluid" id="containershow">
+<div class="container" id="containershow">
   <div>
-    <div class="col-10" style="">
-      <div class="card text-center">
-        <%= cl_image_tag @activity.photo.key%>
+    <div>
+      <div class="card-show text-center">
+        <%= cl_image_tag @activity.photo.key, width: 600, height: 300%>
         <div class="card-body">
           <h5 class="card-title"><%= @activity.name %></h5>
           <hr>
           <p>
-            <a class="btnmap" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+             <%# <button class="btnmap" data-toggle="collapse" > %>
+
+            <button class="btnmap" data-toggle="collapse" href="" role="button" aria-expanded="false" aria-controls="collapseExample" data-action="click -> toggle-map#maptoggle" >
               <i class="fas fa-map" style="color: #f2ad73;"></i> Maps
-            </a>
+            </button>
           </p>
           <div class="collapse" id="collapseExample">
-            <div class="card card-body">
+            <div class="card-show card-body">
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
@@ -24,14 +26,33 @@
         <div class="card-footer text-muted">
           <div class="row">
             <div class="col">
-              <%= link_to '➕ Participation', activity_participations_path(@activity), data: {turbo_method: :post}%>
+
+              <i class="fa-solid fa-plus" style="color: #f2ad73;"></i>
+              <%= link_to "Participate", participation_path(@activity) %>
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="moreinfos">
-    <%= @activity.description %>
+    <h1><%= @activity.name %><hr></h1>
+    <i class="fa-solid fa-play" style="color: #472151;"></i> <%= @activity.description %><hr>
+    <i class="fa-solid fa-location-pin" style="color: #f2ad73;"></i>  <%= @activity.address %> <hr>
+
+  <div class="d-none" data-toggle-map-target="map">
+      <div class="mapshow" style="width: 400px; height: 250px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div><hr>
   </div>
+    <i class="fa-solid fa-link" style="color: #f2ad73;"></i> <%=link_to "Read more about it", @activity.link,  target: "_blank" %> <hr>
+    <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity %> <hr>
+    <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> €<hr>
+  </div>
+</div>
+
 </div>

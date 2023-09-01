@@ -2,7 +2,9 @@ class ActivitiesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
+
     @activities = Activity.all
+
     if params[:query].present?
       sql_subquery = "location ILIKE :query OR address ILIKE :query OR category ILIKE :query"
       @activities = @activities.where(sql_subquery, query: "%#{params[:query]}%")
@@ -23,5 +25,12 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+    @markers = [
+      {
+        lat: @activity.latitude,
+        lng: @activity.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { activity: @activity })
+      }
+    ]
   end
 end

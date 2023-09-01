@@ -1,7 +1,12 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <div class="container-fluid">
-    <p style="color:white; font-size: 50px; font-weight: 600; margin-left: 10px;">👩‍👧🤰🏻Nurturing New Moms Beyond Motherhood</p>
-</div>
-        <%= image_tag "new.png", class: "img" %>
+<div id="containernavbar">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid d-block">
+      <p style="color:white; font-size: 30px; font-weight: 600; margin-left: 150px;">Nurturing New Moms Beyond Motherhood</p>
+      <div class=" mainbuttons d-flex">
+        <button><%= link_to "DISCOVER ALL", activities_path %></button>
+        <button><%= link_to "CONNECT", new_user_session_path %></button>
+      </div>
     </div>
+    <%= image_tag "new.png", class: "img" %>
+  </div>
 </div>

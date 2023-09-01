@@ -14,29 +14,29 @@
   border-radius: 10%;
 }
 
-.card-body a{
+.card-body button{
   color: white;
 }
 
-
 hr {
   border-top: 1px solid #007bff;
-  width:70%;
+  width:100%;
 }
 
-#container-fluid .card{
+#containershow {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+#containershow .card-show{
   background-color: #FFFFFF;
   padding:0;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius:4px;
   box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
-}
-
-
-#container-fluid .card:hover{
-  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-  color:black;
+  margin-right: 100px;
 }
 
 address{
@@ -50,4 +50,34 @@ address{
 
 #containershow{
   display: flex;
+}
+
+.moreinfos{
+  text-align: justify;
+  margin-right: 50px;
+}
+
+.card-body{
+  background-color: white;
+
+  & p{
+    margin-bottom: 20px;
+  }
+
+  & h5{
+    margin-top: 20px;
+  }
+}
+
+.card-footer{
+  background-color: #f2ac736d;
+}
+
+.col a{
+  color: black;
+  font-size: 20px;
+}
+
+.card-show img{
+  object-fit: cover;
 }

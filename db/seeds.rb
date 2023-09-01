@@ -41,7 +41,11 @@ puts "success"
  #Brussels
 require "open-uri"
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316351/Babytheek_logo_dkgax9.png")
+
+
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316351/Babytheek_logo_dkgax9.png")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560039/babytheek2_j6wec6.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560039/babytheek3_swwm8b.jpg")
 activity1 = Activity.create!(
   name: 'Babytheek_Laeken',
   description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
@@ -56,7 +60,9 @@ activity1 = Activity.create!(
 )
 
 if activity1
-  activity1.photo.attach(io: file, filename: "babytheek.jpg", content_type: file.content_type)
+  activity1.photos.attach(io: file1, filename: "babytheek.jpg", content_type: file1.content_type)
+  activity1.photos.attach(io: file2, filename: "babytheek2.jpg", content_type: file2.content_type)
+  activity1.photos.attach(io: file3, filename: "babytheek3.jpg", content_type: file3.content_type)
   puts "activity created successfully!"
   activity1.save
 else
@@ -66,7 +72,19 @@ puts "success"
 
 Chatroom.create!(name: 'Babytheek', activity: activity1)
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/treasure_hunt_nq8rw9.jpg")
+
+
+
+
+
+
+
+
+
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/treasure_hunt_nq8rw9.jpg")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560831/treasurehunt2_zuqdzp.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560831/treasurehunt3_iqrg2d.jpg")
+
 activity2 = Activity.create!(
   name: 'Treasure Hunt',
   description: 'Every child receives a backpack with the equipment to complete missions (treasure map, fancy dress, puzzle, flashlight,...). Every mission gives an indication to find the password that will allow them to reach the treasure chest (where the famous collar of the golden fleece is).The children receive a little gift at the end of the game. Duration: 1h to 1h30',
@@ -80,7 +98,9 @@ activity2 = Activity.create!(
   link: "http://www.waterloo-tourisme.com/en/battlefield-waterloo-treasure-hunt"
 )
 if activity2
-  activity2.photo.attach(io: file, filename: "treasure.jpg", content_type: file.content_type)
+  activity2.photos.attach(io: file1, filename: "treasure.jpg", content_type: file1.content_type)
+  activity2.photos.attach(io: file2, filename: "treasure.jpg", content_type: file2.content_type)
+  activity2.photos.attach(io: file3, filename: "treasure.jpg", content_type: file3.content_type)
   puts "Activity created successfully!"
   activity2.save
 else
@@ -90,7 +110,10 @@ puts "success"
 
 Chatroom.create!(name: 'Treasure Hunt', activity: activity2)
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/komini_pqogco.jpg")
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/komini_pqogco.jpg")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560831/komini2_ra4bnd.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560831/komin3_boegff.jpg")
+
 activity3 = Activity.create!(
   name: 'Komini Waterloo',
   description: 'Enter KOMINI and enjoy a unique, immersive parent-child experience. Much more than an indoor playground, its a wonderland of dreams that breaks down the boundaries of imagination between adults and kids.',
@@ -104,7 +127,9 @@ activity3 = Activity.create!(
   link: "https://komini.be/en/"
 )
 if activity3
-  activity3.photo.attach(io: file, filename: "komini.jpg", content_type: file.content_type)
+  activity3.photos.attach(io: file1, filename: "komini.jpg", content_type: file1.content_type)
+  activity3.photos.attach(io: file2, filename: "komini.jpg", content_type: file2.content_type)
+  activity3.photos.attach(io: file3, filename: "komini.jpg", content_type: file3.content_type)
   puts "Activity created successfully!"
   activity3.save
 else
@@ -113,10 +138,16 @@ end
 
 Chatroom.create!(name: 'Komini Waterloo', activity: activity3)
 
+
+
 #Antwerpen
 
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/Plopsa_Station_sh2x1v.jpg")
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/Plopsa_Station_sh2x1v.jpg")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561414/plospa-station3_ibsrrc.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561415/Plopsa-Station2_jzmuuw.jpg")
+
+
 activity4 = Activity.create!(
   name: 'Plopsa Station',
   description: 'Plopsa is the theme park division of Studio 100, the company operates 8 parks across Belgium, The Netherlands, Germany and Poland. Gert Verhulst as Gert in Plopsaland.',
@@ -131,7 +162,10 @@ activity4 = Activity.create!(
 )
 
 if activity4
-  activity4.photo.attach(io: file, filename: "Plopsa.jpg", content_type: file.content_type)
+  activity4.photos.attach(io: file1, filename: "Plopsa.jpg", content_type: file1.content_type)
+  activity4.photos.attach(io: file2, filename: "Plopsa.jpg", content_type: file2.content_type)
+  activity4.photos.attach(io: file3, filename: "Plopsa.jpg", content_type: file3.content_type)
+
   puts "Activity created successfully!"
   activity4.save
 else
@@ -140,7 +174,10 @@ end
 
 Chatroom.create!(name: 'Plopsa Station', activity: activity4)
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/chocolate_nation_ilj2lg.jpg")
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/chocolate_nation_ilj2lg.jpg")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561412/chocolatenation3_yqn771.jpg")
+file3= URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561411/chocolatenation4_vv04d9.jpg")
+
 activity5 = Activity.create!(
   name: 'Chocolate Nation',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
@@ -154,7 +191,10 @@ activity5 = Activity.create!(
   link: "https://www.chocolatenation.be/fr"
 )
 if activity5
-  activity5.photo.attach(io: file, filename: "chocolate-nation.jpg", content_type: file.content_type)
+  activity5.photos.attach(io: file1, filename: "chocolate-nation.jpg", content_type: file1.content_type)
+  activity5.photos.attach(io: file2, filename: "chocolate-nation.jpg", content_type: file2.content_type)
+  activity5.photos.attach(io: file3, filename: "chocolate-nation.jpg", content_type: file3.content_type)
+
   puts "Activity created successfully!"
   activity5.save
 else
@@ -164,8 +204,10 @@ end
 Chatroom.create!(name: 'Chocolate Nation', activity: activity5)
 
 
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317659/zoo_antwerp_zd8ld5.jpg")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562245/antwerpzoo2_aqasye.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562243/antwerpzoo3_txacql.jpg")
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317659/zoo_antwerp_zd8ld5.jpg")
 activity6 = Activity.create!(
   name: 'Antwerpen Zoo',
   description: 'Antwerp Zoo is a zoo in the centre of Antwerp, Belgium, located next to the Antwerpen-Centraal railway station. It is the oldest animal park in the country, and one of the oldest in the world, established on 21 July 1843.',
@@ -180,7 +222,10 @@ activity6 = Activity.create!(
 )
 
 if activity6
-  activity6.photo.attach(io: file, filename: "antwerp-zoo.jpg", content_type: file.content_type)
+  activity6.photos.attach(io: file1, filename: "antwerp-zoo.jpg", content_type: file1.content_type)
+  activity6.photos.attach(io: file2, filename: "antwerp-zoo.jpg", content_type: file2.content_type)
+  activity6.photos.attach(io: file3, filename: "antwerp-zoo.jpg", content_type: file3.content_type)
+
   puts "Activity created successfully!"
   activity6.save
 else
@@ -189,9 +234,13 @@ end
 
 Chatroom.create!(name: 'Antwerpen Zoo', activity: activity6)
 
+
 #Gent
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317760/pretland_dxz4lf.jpg")
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317760/pretland_dxz4lf.jpg")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/pretland2_pxumv6.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/pretland3_ji1l45.jpg")
+
 activity7 = Activity.create!(
   name: 'Pretland Gent',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
@@ -206,7 +255,10 @@ activity7 = Activity.create!(
 )
 
 if activity7
-  activity7.photo.attach(io: file, filename: "pretland.jpg", content_type: file.content_type)
+  activity7.photos.attach(io: file1, filename: "pretland.jpg", content_type: file1.content_type)
+  activity7.photos.attach(io: file2, filename: "pretland.jpg", content_type: file2.content_type)
+  activity7.photos.attach(io: file3, filename: "pretland.jpg", content_type: file3.content_type)
+
   puts "Activity created successfully!"
   activity7.save
 else
@@ -215,8 +267,10 @@ end
 
 Chatroom.create!(name: 'Pretland Gent', activity: activity7)
 
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317902/blaarmeersen_hbgpaa.jpg")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/blasmeeran3_qsaevl.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/blaarmeersen3_pbmrct.jpg")
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317902/blaarmeersen_hbgpaa.jpg")
 activity8 = Activity.create!(
   name: 'Blaarmeersen',
   description: 'Blaarmeersen Sports and Recreation Park is a green jewel beside the Watersportbaan in Ghent. This is where Ghent residents come jogging, and rowing clubs battle it out on the water. The Watersportbaan in Ghent is also the setting for many festivals and activities for people of all ages.',
@@ -231,17 +285,17 @@ activity8 = Activity.create!(
 )
 
 if activity8
-  activity8.photo.attach(io: file, filename: "blaarmeersen.jpg", content_type: file.content_type)
+  activity8.photos.attach(io: file1, filename: "blaarmeersen.jpg", content_type: file1.content_type)
+  activity8.photos.attach(io: file2, filename: "blaarmeersen.jpg", content_type: file2.content_type)
+  activity8.photos.attach(io: file3, filename: "blaarmeersen.jpg", content_type: file3.content_type)
+
   puts "Activity created successfully!"
   activity8.save
 else
-  puts "Failed to create! activity: #{activity4.errors.full_messages.join(', ')}"
+  puts "Failed to create! activity: #{activity8.errors.full_messages.join(', ')}"
 end
 
 Chatroom.create!(name: 'Blaarmeersen', activity: activity8)
-
-
-
 
 file = URI.open("")
 activity9 = Activity.create!(
@@ -266,7 +320,10 @@ end
 Chatroom.create!(name: 'Chocolate Nation', activity: activity9)
 
 
-file = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693318147/splish_splash_xrhfxl.jpg")
+file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693318147/splish_splash_xrhfxl.jpg")
+file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562783/splishsplash3_rwelop.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562783/splishsplash2_psks86.jpg")
+
 activity10 = Activity.create!(
   name: 'Play Beach',
   description: 'Whether you like water adventures, relaxing in a wellness pool or keeping yourself in shape by swimming laps: Ghent offers a lot of possibilities to go swimming, both indoors and outdoors. Come on, let’s dive in!.',
@@ -281,11 +338,15 @@ activity10 = Activity.create!(
 )
 
 if activity10
-  activity10.photo.attach(io: file, filename: "splish-splash.jpg", content_type: file.content_type)
+  activity10.photos.attach(io: file1, filename: "splish-splash.jpg", content_type: file1.content_type)
+  activity10.photos.attach(io: file2, filename: "splish-splash.jpg", content_type: file2.content_type)
+  activity10.photos.attach(io: file3, filename: "splish-splash.jpg", content_type: file3.content_type)
+
+
   puts "Activity created successfully!"
   activity10.save
 else
   puts "Failed to create! activity: #{activity4.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name: 'Play Beach', activity: activity10)
+Chatroom.create!(name: 'Splish Splash', activity: activity10)

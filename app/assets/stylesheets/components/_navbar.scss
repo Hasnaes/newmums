@@ -10,13 +10,30 @@
   flex-grow: 0;
 }
 
-.container-fluid .img {
+.img {
   width: 250px;
   margin: 0 auto;
   align-items: center;
-  margin-right: 100px;
 }
 
 .logo{
   margin: 0 auto;
+}
+
+.mainbuttons{
+  margin-left: 150px;
+}
+.mainbuttons button{
+  background-color: #ffa345;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+
+  &:hover{
+    background-color: #3b2747ba;
+    opacity: 0.9;
+    transition: 0.3s;
+  }
 }

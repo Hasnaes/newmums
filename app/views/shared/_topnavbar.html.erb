@@ -1,29 +1,31 @@
-<div class="navbar navbar-expand-sm navbar-light navbarr-lewagon">
-  <div class="container-fluid" style="background-color: #f2ac7370">
-    <a class="navbarr-brand" href="#">
-        <%= image_tag "new.png", class: "logotop", style: "width: 100px;"%>
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div id="globalcontainer" data-controller="button">
+  <div class="navbar navbar-expand-sm navbar-light navbarr-lewagon" id="topnavbar">
+    <div class="container-fluid" style="background-color: #3b27478e">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fa-solid fa-house" style="color: #3b2747;"></i>  Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-table-columns" style="color: #3b2747;"></i>   My dashboard</a>
-          </li>
-          <li class="nav-item dropdown">
-            <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+      <div class="sidemenu">
+        <a data-action="click -> button#slidemenu"><i class="fa-solid fa-bars fa-2xl" style="color: #3b2747;"></i></a>
+        <p data-button-target="menu" class="d-none">
+            <a class="nav-link" href="/activities"><i class="fa-solid fa-house" style="color: #3b2747;"></i>  Home</a>
+            <a class="nav-link" href="/activities"><i class="fa-solid fa-table-columns" style="color: #3b2747;"></i>  My dashboard</a>
+        </p>
+        </div>
+      <div>
+        <%= image_tag "new.png", class: "logotop", style: "width: 100px;"%>
+      </div>
+
+      <div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://yt3.googleusercontent.com/ec4oIO18ZZ9tpticBhF0N7PNrEWb0qvwi4K-y32UNn8PD-c3PKT1PCeXIbit6qXL4JGrD-uc09w=s900-c-k-c0x00ffffff-no-rj" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+              <li><a class="dropdown-item" data-turbo-method="delete" href="#"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #3b2747;"></i> Log out</a>            </li>
             </div>
-          </li>
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

@@ -220,8 +220,8 @@ activity6 = Activity.create!(
   end_date: Date.new(2023, 9, 9),
   category: 'indoor',
   link: "https://www.zooantwerpen.be/fr/tickets-dentree/?gclid=Cj0KCQjw9MCnBhCYARIsAB1WQVVMT1w4O5tL9JPanCltQLbLgitf3RuLYPjyefCYjv1bubB_dMMHTX0aAsp5EALw_wcB",
-  latitude: 51.2192003,
-  longitude: 4.420874
+  latitude: 51.218067,
+  longitude: 4.421839
 )
 
 if activity6

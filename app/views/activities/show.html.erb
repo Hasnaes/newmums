@@ -5,16 +5,6 @@
 <div class="container" id="containershow">
   <div>
     <div>
-      <div class="container">
-    <div class="row">
-      <div class="col-xs-4">
-        <%= simple_form_for([@activity, @review], data: { controller: "submit" }) do |f|%>
-          <%= f.input :rating, collection: (1..5).to_a, input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %>
-          <%# <%= f.submit, hmtl: {class: "d-none"} %> %>
-      <% end %>
-      </div>
-    </div>
-  </div>
       <div class="card-show text-center">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
@@ -80,6 +70,10 @@
     <i class="fa-solid fa-link" style="color: #f2ad73;"></i> <%=link_to "Read more about it", @activity.link,  target: "_blank" %> <hr>
     <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity %> <hr>
     <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> €<hr>
+    <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%>
+      <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i><%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %></p>
+          <%# <%= f.submit, hmtl: {class: "d-none"} %>
+      <% end %><hr>
   </div>
 </div>
 

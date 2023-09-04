@@ -24,6 +24,7 @@ class ActivitiesController < ApplicationController
   end
 
   def show
+    @participation = Participation.new
     @activity = Activity.find(params[:id])
     @markers = [
       {

@@ -1,4 +1,5 @@
 class ParticipationsController < ApplicationController
+  
   def create
     @participation = Participation.new
     @activity = Activity.find(params[:activity_id])
@@ -6,6 +7,7 @@ class ParticipationsController < ApplicationController
     @participation.user = current_user
 
     if @participation.save
+
       redirect_to my_dashboard_path, notice: 'Participation was successfully created.'
     else
       render 'activities/show', status: :unprocessable_entity

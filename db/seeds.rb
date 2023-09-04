@@ -72,15 +72,6 @@ puts "success"
 
 Chatroom.create!(name: 'Babytheek', activity: activity1)
 
-
-
-
-
-
-
-
-
-
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/treasure_hunt_nq8rw9.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560831/treasurehunt2_zuqdzp.jpg")
 file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560831/treasurehunt3_iqrg2d.jpg")

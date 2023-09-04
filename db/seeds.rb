@@ -47,7 +47,7 @@ file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316351/
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560039/babytheek2_j6wec6.jpg")
 file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560039/babytheek3_swwm8b.jpg")
 activity1 = Activity.create!(
-  name: 'Babytheek_Laeken',
+  name: 'Babytheek Laeken',
   description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
   capacity: 15,
   address: "28 Rue Gustave Schildknechtstraat, Laeken",
@@ -59,6 +59,8 @@ activity1 = Activity.create!(
   link: "https://babytheeknekkersdal.myturn.com/library/",
   latitude: 50.87343215942383,
   longitude: 4.347685813903809
+  latitude: 50.873312,
+  longitude: 4.3475352
 )
 
 if activity1
@@ -220,6 +222,7 @@ activity6 = Activity.create!(
   end_date: Date.new(2023, 9, 9),
   category: 'indoor',
   link: "https://www.zooantwerpen.be/fr/tickets-dentree/?gclid=Cj0KCQjw9MCnBhCYARIsAB1WQVVMT1w4O5tL9JPanCltQLbLgitf3RuLYPjyefCYjv1bubB_dMMHTX0aAsp5EALw_wcB",
+
   latitude: 51.218067,
   longitude: 4.421839
 )
@@ -343,6 +346,7 @@ activity10 = Activity.create!(
   link: "https://www.playbeach.eu/",
   latitude: 51.03782653808594,
   longitude: 3.7670440673828125
+
 )
 
 if activity10

@@ -4,8 +4,16 @@ class User < ApplicationRecord
   has_many :participations
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_one_attached :avatar
+  belongs_to :entity, optional: true
+  validate :user_can_participate_in_only_one_entity
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, presence: true, length: { minimum: 6 }
+
+  def user_can_participate_in_only_one_entity
+    puts "coucou"
+  end
+
 end

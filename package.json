@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "star-rating.js": "^4.3.0",
+
+    "flatpickr": "^4.6.13",
+
     "stimulus-carousel": "^5.0.1",
     "swiper": "^10.2.0"
   }

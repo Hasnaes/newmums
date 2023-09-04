@@ -6,7 +6,29 @@
   <div>
     <div>
       <div class="card-show text-center">
-        <%= cl_image_tag @activity.photo.key, width: 600, height: 300%>
+
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= cl_image_tag @activity.photos[0].key , width: 600, height: 300%>
+          </div>
+          <div class="carousel-item">
+            <%= cl_image_tag @activity.photos[1].key, width: 600, height: 300%>
+          </div>
+          <div class="carousel-item">
+            <%= cl_image_tag @activity.photos[2].key, width: 600, height: 300%>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
         <div class="card-body">
           <h5 class="card-title"><%= @activity.name %></h5>
           <hr>

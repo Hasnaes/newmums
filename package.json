@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "star-rating.js": "^4.3.0",
     "stimulus-carousel": "^5.0.1",
     "swiper": "^10.2.0"
   }

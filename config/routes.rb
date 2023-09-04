@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :activities, only: [:index, :show] do
     resources :participations, only: [:create]
-    resources :reviews, only: [:new]
+    resources :reviews, only: [:create]
       end
 
   get "my_dashboard", to: "participations#my_dashboard"

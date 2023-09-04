@@ -22,7 +22,10 @@
         <ul class="navbar-nav me-auto">
           <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://yt3.googleusercontent.com/ec4oIO18ZZ9tpticBhF0N7PNrEWb0qvwi4K-y32UNn8PD-c3PKT1PCeXIbit6qXL4JGrD-uc09w=s900-c-k-c0x00ffffff-no-rj" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" data-turbo-method="delete" href="#"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #3b2747;"></i> Log out</a>            </li>
+          <li> <%= link_to destroy_user_session_path, class: "dropdown-item", data: {turbo_method: "delete"} do %>
+              <i class="fa-solid fa-arrow-right-from-bracket" style="color: #3b2747;"></i> Log out
+              <% end %>
+            </li>
             </div>
         </ul>
       </div>

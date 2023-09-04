@@ -1,5 +1,5 @@
 class ParticipationsController < ApplicationController
-  
+
   def create
     @participation = Participation.new
     @activity = Activity.find(params[:activity_id])

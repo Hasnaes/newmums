@@ -2,6 +2,6 @@
   <div class="pins">
     <h2><%= activity.name %></h2>
     <p><%= activity.address %></p>
-    <%= cl_image_tag activity.photo.key, width: 100, height: 75, crop: :fill%>
+    <%= cl_image_tag activity.photos.first.key, width: 100, height: 75, crop: :fill%>
   </div>
 <% end %>

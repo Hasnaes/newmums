@@ -6,7 +6,6 @@
   <div>
     <div>
       <div class="card-show text-center">
-
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -73,10 +72,19 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div><hr>
   </div>
+
+    <i class="fa-solid fa-link" style="color: #f2ad73;"></i> <%=link_to "Read more about it", @activity.link,  target: "_blank" %> <hr>
+    <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity %> <hr>
+    <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> €<hr>
+    <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%>
+      <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i><%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %></p>
+          <%# <%= f.submit, hmtl: {class: "d-none"} %>
+      <% end %><hr>
     <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity - @activity.participations.size %> Spots <hr>
     <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> €    |   Children Free<hr>
     <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.participations.size %> Mums Attending<hr>
     <i class="fa-solid fa-link" style="color: #f2ad73;"></i> <%=link_to "Learn More", @activity.link,  target: "_blank" %> <hr>
+
   </div>
 </div>
 

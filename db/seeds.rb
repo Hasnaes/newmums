@@ -57,6 +57,8 @@ activity1 = Activity.create!(
   end_date: Date.new(2023, 9, 10),
   category: 'indoor',
   link: "https://babytheeknekkersdal.myturn.com/library/",
+  latitude: 50.87343215942383,
+  longitude: 4.347685813903809
   latitude: 50.873312,
   longitude: 4.3475352
 )
@@ -188,8 +190,8 @@ activity5 = Activity.create!(
   end_date: Date.new(2023, 9, 10),
   category: 'indoor',
   link: "https://www.chocolatenation.be/fr",
-  latitude: 51.21905517578125,
-  longitude: 4.420737266540527
+  latitude: 51.2192003,
+  longitude: 4.420874
 )
 if activity5
   activity5.photos.attach(io: file1, filename: "chocolate-nation.jpg", content_type: file1.content_type)
@@ -220,8 +222,9 @@ activity6 = Activity.create!(
   end_date: Date.new(2023, 9, 9),
   category: 'indoor',
   link: "https://www.zooantwerpen.be/fr/tickets-dentree/?gclid=Cj0KCQjw9MCnBhCYARIsAB1WQVVMT1w4O5tL9JPanCltQLbLgitf3RuLYPjyefCYjv1bubB_dMMHTX0aAsp5EALw_wcB",
-  latitude: 51.219063,
-  longitude: 4.4208537
+
+  latitude: 51.218067,
+  longitude: 4.421839
 )
 
 if activity6
@@ -254,7 +257,9 @@ activity7 = Activity.create!(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 10),
   category: 'outdoor',
-  link: "https://www.ballorig.be/"
+  link: "https://www.ballorig.be/",
+  latitude: 51.0744215,
+  longitude: 3.7232245
 )
 
 if activity7
@@ -285,8 +290,8 @@ activity8 = Activity.create!(
   end_date: Date.new(2023, 9, 17),
   category: 'outdoor',
   link: "https://stad.gent/nl/blaarmeersen",
-  latitude: 51.0744215,
-  longitude:3.7232245
+  latitude: 51.0484104,
+  longitude: 3.6921805
 )
 
 if activity8
@@ -339,8 +344,8 @@ activity10 = Activity.create!(
   end_date: Date.new(2023, 9, 3),
   category: 'outdoor',
   link: "https://www.playbeach.eu/",
-  latitude: 51.0370742,
-  longitude: 3.7650021
+  latitude: 51.03782653808594,
+  longitude: 3.7670440673828125
 
 )
 

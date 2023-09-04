@@ -26,7 +26,8 @@
                 <p>Spots left</p>
                 </div>
               </div>
-              <li class="text"><%= activity.description %></li>
+              <hr>
+              <li class="text"><%= activity.description[0..100]%>...</li>
             </ul>
             </div>
         <% end %>

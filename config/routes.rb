@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
   devise_for :users
   root to: "activities#index"
 
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :activities, only: [:index, :show] do
     resources :participations, only: [:create]
+    resources :reviews, only: [:new]
       end
 
   get "my_dashboard", to: "participations#my_dashboard"

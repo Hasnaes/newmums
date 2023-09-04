@@ -47,7 +47,7 @@ file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316351/
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560039/babytheek2_j6wec6.jpg")
 file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560039/babytheek3_swwm8b.jpg")
 activity1 = Activity.create!(
-  name: 'Babytheek_Laeken',
+  name: 'Babytheek Laeken',
   description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
   capacity: 15,
   address: "28 Rue Gustave Schildknechtstraat, Laeken",

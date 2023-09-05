@@ -46,10 +46,10 @@
         </div>
         <div class="card-footer text-muted">
           <div class="row">
-            <div class="col">
+            <div class="col" style="margin: 20px;">
                 <%# <%= link_to '➕ Participate', activity_participations_path(@activity), data: {turbo_method: :post}%>
                <%= simple_form_for [@activity, @participation], data: { controller: 'flatpickr' } do |f| %>
-               <%= f.date_field :participation_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
+               <%= f.date_field :participation_date, as: :date_field, input_html: { data: { flatpickr_target: "participtationDate" } } %>
                <%= f.submit 'Confirm Date' %>
                <% end %>
             </div>
@@ -63,6 +63,8 @@
     <h1><%= @activity.name %><hr></h1>
     <i class="fa-solid fa-play" style="color: #472151;"></i> <%= @activity.description %><hr>
     <i class="fa-solid fa-location-pin" style="color: #f2ad73;"></i>  <%= @activity.address %> <hr>
+    <i class='fas fa-calendar-alt'style="color: #f2ad73;"></i> <%= @activity.start_date%> - <%= @activity.end_date%> <hr>
+
 
   <div class="d-none" data-toggle-map-target="map">
       <div class="mapshow" style="width: 400px; height: 250px;"
@@ -78,9 +80,9 @@
           <%# <%= f.submit, hmtl: {class: "d-none"} %>
       <% end %><hr>
 <%# ------------- More infos ------------- %>
-    <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity - @activity.participations.size %> Spots <hr>
+    <%# <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity - @activity.participations.size Spots <hr> %>
     <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> € | Mum <i class="fa-solid fa-children" style="color: #f2ad73;"></i>   Children Free<hr>
-    <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.participations.size %> Mums Attending<hr>
+    <%# <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.participations.size %>
     <i class="fa-solid fa-link" style="color: #f2ad73;"></i> <%=link_to "Read more about it", @activity.link,  target: "_blank" %> <hr>
 
   </div>

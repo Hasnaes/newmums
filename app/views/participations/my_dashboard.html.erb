@@ -17,19 +17,20 @@
       <th>Cancel</th>
     </tr>
   </thead>
+
   <tbody>
-    <% @activities.each do |activity| %>
+    <% @participations.each do |participation| %>
       <tr>
-        <td><%= link_to activity.name, activity_path(activity) %></td>
-        <td><%= activity.category %></td>
-        <td><%= activity.price %></td>
-        <td><%= activity.location %></td>
-        <td><%= activity.capacity %></td>
-        <td><%= activity.start_date %></td>
-        <td><%= link_to chatroom_path(activity.chatroom) do %>
+        <td><%= link_to participation.activity.name, activity_path(participation.activity) %></td>
+        <td><%= participation.activity.category %></td>
+        <td><%= participation.activity.price %></td>
+        <td><%= participation.activity.location %></td>
+        <td><%= participation.activity.capacity %></td>
+        <td><%= participation.participation_date %></td>
+        <td><%= link_to chatroom_path(participation.activity.chatroom) do %>
           <i class="fa-solid fa-link"></i>
         <% end %></td>
-        <td><%= link_to participation_path(activity.participations.find_by(user: current_user)),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <td><%= link_to participation_path(participation),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
             <i class="fa-solid fa-trash-can"></i>
         <% end %></td>
         </tr>

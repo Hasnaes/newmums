@@ -12,8 +12,8 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to activity_path(@activity)
     else
-        flash[:alert] = "Something went wrong."
-        render :new
+      flash[:alert] = "Something went wrong."
+      render :new
     end
   end
 

@@ -1,10 +1,13 @@
 <%= render "shared/topnavbar" %>
 <!------ Include the above in your HEAD tag ---------->
 <div id="totalcontainer" data-controller="toggle-map">
-
 <div class="container" id="containershow">
   <div>
     <div>
+    <div><%= (' ⭐ ' * @activity.average_rating)  %>
+      <%if @activity.average_rating >= 4 %>/5 <i class="fa-solid fa-trophy fa-2xs" style="color: #3b2747;"></i>     <%= "   Best activity ever" %>
+      <% end %>
+    </div> <hr style="width: 50%; border-top: 1px solid black;">
       <div class="card-show text-center">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">

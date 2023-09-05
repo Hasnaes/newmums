@@ -11,7 +11,7 @@
       <th>Category</th>
       <th>Price</th>
       <th>Location</th>
-      <th>Attendee</th>
+      <th>Mums Attending</th>
       <th>Date</th>
       <th>Chatoom</th>
       <th>Cancel</th>
@@ -25,7 +25,7 @@
         <td><%= participation.activity.category %></td>
         <td><%= participation.activity.price %></td>
         <td><%= participation.activity.location %></td>
-        <td><%= participation.activity.capacity %></td>
+        <td><%= participation.activity.participations.count %></td>
         <td><%= participation.participation_date %></td>
         <td><%= link_to chatroom_path(participation.activity.chatroom) do %>
           <i class="fa-solid fa-link"></i>

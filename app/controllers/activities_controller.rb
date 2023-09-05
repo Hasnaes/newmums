@@ -34,5 +34,6 @@ class ActivitiesController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: { activity: @activity })
       }
     ]
+    @average = @activity.review
   end
 end

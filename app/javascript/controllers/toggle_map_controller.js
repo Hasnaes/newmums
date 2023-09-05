@@ -5,11 +5,9 @@ export default class extends Controller {
   static targets = ["map"]
 
   connect() {
-    console.log("hello")
   }
 
   maptoggle() {
-    console.log("hey")
     this.mapTarget.classList.toggle('d-none');
   }
 }

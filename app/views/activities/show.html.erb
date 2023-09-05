@@ -73,9 +73,9 @@
   </div>
 
 <%# ------------- Reviews ------------- %>
-    <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%>
-      <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i><%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %></p>
-          <%# <%= f.submit, hmtl: {class: "d-none"} %>
+  <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i> <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%></p>
+      <%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %>
+          <%= f.submit%>%
       <% end %><hr>
 <%# ------------- More infos ------------- %>
     <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity - @activity.participations.size %> Spots <hr>

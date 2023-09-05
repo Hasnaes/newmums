@@ -20,26 +20,26 @@
         </p>
         </div> %>
 
-      <div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-        <% if user_signed_in? && current_user.avatar.key %>
-          <%= cl_image_tag current_user.avatar.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", 'data-bs-toggle': "dropdown", 'aria-haspopup': "true", 'aria-expanded': "false"%>
-        <% else %>
-          <%= image_tag "avatar.png", class: "avatar-large dropdown-toggle", id: "navbarDropdown", 'data-bs-toggle': "dropdown", 'aria-haspopup': "true", 'aria-expanded': "false" %>
-        <% end %>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li> <%= link_to destroy_user_session_path, class: "dropdown-item", data: {turbo_method: "delete"} do %>
-              <i class="fa-solid fa-arrow-right-from-bracket" style="color: #3b2747;"></i> Log out
-          <%= link_to edit_user_registration_path, class: "dropdown-item", data: { turbo_action: "replace" } do %>
-            <i class="fa-solid fa-edit" style="color: #3b2747;"></i> Edit Profile
+      <div class="d-flex" data-controller="slidemenu">
+
+        <div class="d-flex" style="text-align: center;" class="d-none" data-slidemenu-target="items">
+          <ul style="display: flex; align-items: center;">
+            <li style="margin-right: 10px;"><%= link_to destroy_user_session_path, data: {turbo_method: "delete"} do %>
+            <i class="fa-solid fa-power-off" style="color: #ffffff;"></i>
+            <% end %></li>
+            <li class="edit" style="margin-right: 10px;"><%= link_to edit_user_registration_path, data: { turbo_action: "replace" } do %>
+            <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
+            <% end %></li>
+          </ul>
+        </div>
+
+        <div >
+          <% if user_signed_in? && current_user.avatar.key %>
+            <a style="background: none;"data-action="click -> slidemenu#slide"><%= cl_image_tag current_user.avatar.key, class: "avatar-bordered"%></a>
+          <% else %>
+            <%= image_tag "avatar.png", class: "avatar-large" %>
           <% end %>
-              <% end %>
-            </li>
-            </div>
+        </div>
         </ul>
       </div>
     </div>

@@ -1,50 +1,102 @@
-/* Apply basic styling to the chatroom container */
-.container.chatroom {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 50px;
+/* Style the chatroom container */
+.chatroom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  background-color: #e5b989;
+  border-top: 1px solid #ccc;
 }
 
-/* Style for the chatroom title */
-.container.chatroom h1 {
+.chatroom.container {
+  border-radius: 0px;
+  padding-bottom: 20px;
+  width: 900px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the message input */
+.chatroom input[type="text"] {
+  width: 800px; /* Make the input full width */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 10px; /* Add some spacing between input and button */
+}
+
+
+.chatroom input[type="submit"] {
+  width: 100%; /* Make the button full width */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatroom input[type="submit"]:hover {
+  background-color: #4d116e;
+}
+
+/* Style the messages container */
+.messages {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #cfcbd1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto;
+  width: 800px;
+}
+
+/* Style individual messages */
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  width: 500px;
+}
+
+/* Style the chatroom title */
+h1 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-/* Style for individual messages */
-.messages {
-  margin-top: 10px;
+/* Style the chatroom title prefix (#) */
+h1:before {
+  content: "#";
+  color: #575a5e;
+  margin-right: 5px;
 }
 
-.messages small {
-  font-size: 12px;
-  color: #888;
+/* Center align the chatroom title and input */
+.chatroom h1,
+.chatroom .sendbutton {
+  text-align: center;
 }
 
-.messages p {
-  margin: 5px 0;
-}
-
-
-
-.container.chatroom form input[type="text"] {
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
+/* Center the send button vertically */
+.sendbutton {
+  display: flex;
+  align-items: center;
+  color: #4d116e;
 }
 
 
-
-.container.chatroom form input[type="submit"] {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
+.chatroom {
+  width: 500px;
 }
+
+
+.custom-form {
+  width: 80%;
+ }

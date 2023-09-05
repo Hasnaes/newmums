@@ -56,7 +56,11 @@ activity1 = Activity.create!(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 10),
   category: 'indoor',
-  link: "https://babytheeknekkersdal.myturn.com/library/"
+  link: "https://babytheeknekkersdal.myturn.com/library/",
+  latitude: 50.87343215942383,
+  longitude: 4.347685813903809,
+  latitude: 50.873312,
+  longitude: 4.3475352
 )
 
 if activity1
@@ -86,7 +90,9 @@ activity2 = Activity.create!(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 11),
   category: 'indoor',
-  link: "http://www.waterloo-tourisme.com/en/battlefield-waterloo-treasure-hunt"
+  link: "http://www.waterloo-tourisme.com/en/battlefield-waterloo-treasure-hunt",
+  latitude: 50.8466,
+  longitude: 4.3528
 )
 if activity2
   activity2.photos.attach(io: file1, filename: "treasure.jpg", content_type: file1.content_type)
@@ -115,7 +121,9 @@ activity3 = Activity.create!(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 12),
   category: 'indoor',
-  link: "https://komini.be/en/"
+  link: "https://komini.be/en/",
+  latitude: 50.71044,
+  longitude: 4.403585
 )
 if activity3
   activity3.photos.attach(io: file1, filename: "komini.jpg", content_type: file1.content_type)
@@ -149,7 +157,9 @@ activity4 = Activity.create!(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 13),
   category: 'indoor',
-  link: "https://www.plopsastationantwerp.be/fr"
+  link: "https://www.plopsastationantwerp.be/fr",
+  latitude: 51.2128446,
+  longitude: 4.421058
 )
 
 if activity4
@@ -179,7 +189,9 @@ activity5 = Activity.create!(
   start_date: Date.new(2023, 9, 7),
   end_date: Date.new(2023, 9, 10),
   category: 'indoor',
-  link: "https://www.chocolatenation.be/fr"
+  link: "https://www.chocolatenation.be/fr",
+  latitude: 51.2192003,
+  longitude: 4.420874
 )
 if activity5
   activity5.photos.attach(io: file1, filename: "chocolate-nation.jpg", content_type: file1.content_type)
@@ -209,7 +221,10 @@ activity6 = Activity.create!(
   start_date: Date.new(2023, 9, 6),
   end_date: Date.new(2023, 9, 9),
   category: 'indoor',
-  link: "https://www.zooantwerpen.be/fr/tickets-dentree/?gclid=Cj0KCQjw9MCnBhCYARIsAB1WQVVMT1w4O5tL9JPanCltQLbLgitf3RuLYPjyefCYjv1bubB_dMMHTX0aAsp5EALw_wcB"
+  link: "https://www.zooantwerpen.be/fr/tickets-dentree/?gclid=Cj0KCQjw9MCnBhCYARIsAB1WQVVMT1w4O5tL9JPanCltQLbLgitf3RuLYPjyefCYjv1bubB_dMMHTX0aAsp5EALw_wcB",
+
+  latitude: 51.218067,
+  longitude: 4.421839
 )
 
 if activity6
@@ -242,7 +257,9 @@ activity7 = Activity.create!(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 10),
   category: 'outdoor',
-  link: "https://www.ballorig.be/"
+  link: "https://www.ballorig.be/",
+  latitude: 51.0744215,
+  longitude: 3.7232245
 )
 
 if activity7
@@ -272,7 +289,9 @@ activity8 = Activity.create!(
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 17),
   category: 'outdoor',
-  link: "https://stad.gent/nl/blaarmeersen"
+  link: "https://stad.gent/nl/blaarmeersen",
+  latitude: 51.0484104,
+  longitude: 3.6921805
 )
 
 if activity8
@@ -324,7 +343,10 @@ activity10 = Activity.create!(
   start_date: Date.new(2023, 9, 2),
   end_date: Date.new(2023, 9, 3),
   category: 'outdoor',
-  link: "https://www.playbeach.eu/"
+  link: "https://www.playbeach.eu/",
+  latitude: 51.03782653808594,
+  longitude: 3.7670440673828125
+
 )
 
 if activity10

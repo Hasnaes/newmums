@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_31_133934) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_04_123402) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -82,8 +82,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_133934) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "participation_date"
     t.index ["activity_id"], name: "index_participations_on_activity_id"
     t.index ["user_id"], name: "index_participations_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "rating"
+    t.bigint "activity_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "content"
+    t.index ["activity_id"], name: "index_reviews_on_activity_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -108,4 +118,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_133934) do
   add_foreign_key "messages", "users"
   add_foreign_key "participations", "activities"
   add_foreign_key "participations", "users"
+  add_foreign_key "reviews", "activities"
 end

@@ -22,17 +22,17 @@
                 <p>euros</p>
                 </div>
                 <div class="capacity">
-              <li><%= activity.capacity %></li>
-                <p>capacity</p>
+              <li><%= activity.capacity - activity.participations.size %></li>
+                <p>Spots left</p>
                 </div>
               </div>
-              <li class="text"><%= activity.description %></li>
+              <hr>
+              <li class="text"><%= activity.description[0..100]%>...</li>
             </ul>
             </div>
         <% end %>
       <% end %>
   </div>
-
     <div class="map" style="width: 50%; height: 100vh;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"

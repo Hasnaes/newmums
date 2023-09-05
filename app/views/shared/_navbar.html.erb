@@ -1,10 +1,17 @@
+<% if user_signed_in? %>
+  <%= render "shared/topnavbar" %>
+<% end %>
 <div id="containernavbar">
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="container-fluid d-block">
       <p style="color:white; font-size: 30px; font-weight: 600; margin-left: 150px;">Nurturing New Moms Beyond Motherhood</p>
       <div class=" mainbuttons d-flex">
         <button><%= link_to "DISCOVER ALL", "#toppage" %></button>
+        <% if not user_signed_in? %>
         <button><%= link_to "CONNECT", new_user_session_path %></button>
+        <% else %>
+        <button class="news"><%= link_to "NEWS", new_user_session_path %></button>
+        <% end %>
       </div>
       <div class="cities" >
         <%= button_to "Antwerpen", "#toppage", params: {where: "Antwerpen"}, method: :get, class: "btn text-white" %>

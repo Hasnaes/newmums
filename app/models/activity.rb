@@ -1,5 +1,4 @@
 class Activity < ApplicationRecord
-
   has_one :chatroom
   has_many_attached :photos
   has_many :reviews, dependent: :destroy
@@ -16,4 +15,14 @@ class Activity < ApplicationRecord
   # validates :location, presence: true
   # validates :photo, presence: true
   validates :category, presence: true
+
+  def average_rating
+    total = 0
+    self.reviews.each do |review|
+      total += review.rating.to_i
+    end
+    total / self.reviews.count
+  rescue ZeroDivisionError
+    0.0
+  end
 end

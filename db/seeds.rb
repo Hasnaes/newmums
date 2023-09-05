@@ -58,9 +58,7 @@ activity1 = Activity.create!(
   category: 'indoor',
   link: "https://babytheeknekkersdal.myturn.com/library/",
   latitude: 50.87343215942383,
-  longitude: 4.347685813903809,
-  latitude: 50.873312,
-  longitude: 4.3475352
+  longitude: 4.347685813903809
 )
 
 if activity1

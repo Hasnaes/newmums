@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     @review.activity = @activity
     @review.user = current_user
     if @review.save
-      redirect_to new_review_path
+      redirect_to activity_path(@activity)
     else
       flash[:alert] = "Something went wrong."
       render :new

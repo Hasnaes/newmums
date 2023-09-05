@@ -28,6 +28,14 @@
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li> <%= link_to destroy_user_session_path, class: "dropdown-item", data: {turbo_method: "delete"} do %>
               <i class="fa-solid fa-arrow-right-from-bracket" style="color: #3b2747;"></i> Log out
+
+
+<%= link_to edit_user_registration_path, class: "dropdown-item", data: { turbo_action: "replace" } do %>
+  <i class="fa-solid fa-edit" style="color: #3b2747;"></i> Edit Profile
+<% end %>
+
+
+
               <% end %>
             </li>
             </div>

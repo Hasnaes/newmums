@@ -1,5 +1,5 @@
 class ParticipationsController < ApplicationController
-  
+
   def create
     @participation = Participation.new
     @activity = Activity.find(params[:activity_id])
@@ -22,7 +22,7 @@ class ParticipationsController < ApplicationController
   def destroy
     @participation = Participation.find_by(id: params[:id])
     if @participation.destroy
-      redirect_to activities_path, notice: 'Participation was successfully cancelled.'
+      redirect_to my_dashboard_path, notice: 'Participation was successfully cancelled.'
     end
   end
 end

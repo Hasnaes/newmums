@@ -65,18 +65,7 @@
   width: 500px;
 }
 
-/* Style the chatroom title */
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
 
-/* Style the chatroom title prefix (#) */
-h1:before {
-  content: "#";
-  color: #575a5e;
-  margin-right: 5px;
-}
 
 /* Center align the chatroom title and input */
 .chatroom h1,

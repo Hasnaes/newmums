@@ -35,7 +35,7 @@
 
         <div >
           <% if user_signed_in? && current_user.avatar.key %>
-            <a style="background: none;"data-action="click -> slidemenu#slide"><%= cl_image_tag current_user.avatar.key, class: "avatar-bordered"%></a>
+            <a style="background: none;" data-action="click -> slidemenu#slide"><%= cl_image_tag current_user.avatar.key, class: "avatar-bordered"%></a>
           <% else %>
             <%= image_tag "avatar.png", class: "avatar-large" %>
           <% end %>

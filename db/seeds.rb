@@ -356,7 +356,6 @@ activity10 = Activity.create!(
   link: "https://www.playbeach.eu/",
   latitude: 51.03782653808594,
   longitude: 3.7670440673828125
-
 )
 
 if activity10
@@ -485,3 +484,32 @@ message4 = Message.new(
 message4.chatroom = kominichat
 message4.user = user2
 message4.save!
+
+
+
+#--------------News seeds--------------------------
+
+news1 = News.create!(
+  title: 'test',
+  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+)
+news1.save!
+
+
+news2 = News.create!(
+  title: 'test',
+  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+)
+news2.save!
+
+news3 = News.create!(
+  title: 'test',
+  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+)
+news3.save!
+
+news4 = News.create!(
+  title: 'test',
+  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+)
+news4.save!

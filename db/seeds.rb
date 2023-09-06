@@ -20,7 +20,9 @@ User.destroy_all
 puts "success"
 
 
-User.create!(
+# Users
+
+user1 = User.create!(
   first_name: 'michael',
   last_name: 'rodriguez',
   email: 'michael@test.com',
@@ -29,7 +31,7 @@ User.create!(
 )
 puts "success"
 
-User.create!(
+user2 = User.create!(
   first_name: 'lisa',
   last_name: 'vanpraat',
   email: 'lisa@test.com',
@@ -38,7 +40,35 @@ User.create!(
 )
 puts "success"
 
- #Brussels
+user3 = User.create!(
+  first_name: 'rohma',
+  last_name: 'rohma',
+  email: 'rohma@test.com',
+  username: 'rohma',
+  password: '123456'
+)
+user4 = User.create!(
+  first_name: 'leo',
+  last_name: 'thompson',
+  email: 'leo@test.com',
+  username: 'leo',
+  password: '123456'
+)
+puts "success"
+
+user5 = User.create!(
+  first_name: 'hasnae',
+  last_name: 'hasnae',
+  email: 'hasnae@test.com',
+  username: 'hasnae',
+  password: '123456'
+)
+
+
+
+
+
+ #Brussels Activities
 require "open-uri"
 
 
@@ -54,7 +84,7 @@ activity1 = Activity.create!(
   price: 30,
   location: 'Brussels',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 10),
+  end_date: Date.new(2023, 9, 30),
   category: 'indoor',
   link: "https://babytheeknekkersdal.myturn.com/library/",
   latitude: 50.87343215942383,
@@ -86,7 +116,7 @@ activity2 = Activity.create!(
   price: 4,
   location: 'Brussels',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 11),
+  end_date: Date.new(2023, 9, 30),
   category: 'indoor',
   link: "http://www.waterloo-tourisme.com/en/battlefield-waterloo-treasure-hunt",
   latitude: 50.8466,
@@ -117,7 +147,7 @@ activity3 = Activity.create!(
   price: 15,
   location: 'Wallonie',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 12),
+  end_date: Date.new(2023, 9, 30),
   category: 'indoor',
   link: "https://komini.be/en/",
   latitude: 50.71044,
@@ -133,7 +163,7 @@ else
   puts "Failed to create! activity: #{activity3.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name: 'Komini Waterloo', activity: activity3)
+kominichat = Chatroom.create!(name: 'Komini Waterloo', activity: activity3)
 
 
 
@@ -153,7 +183,7 @@ activity4 = Activity.create!(
   price: 20,
   location: 'Antwerpen',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 13),
+  end_date: Date.new(2023, 9, 30),
   category: 'indoor',
   link: "https://www.plopsastationantwerp.be/fr",
   latitude: 51.2128446,
@@ -184,8 +214,8 @@ activity5 = Activity.create!(
   address: "Koningin Astridplein 7, 2018 Antwerpen",
   price: 14,
   location: 'Antwerpen',
-  start_date: Date.new(2023, 9, 7),
-  end_date: Date.new(2023, 9, 10),
+  start_date: Date.new(2023, 9, 9),
+  end_date: Date.new(2023, 9, 30),
   category: 'indoor',
   link: "https://www.chocolatenation.be/fr",
   latitude: 51.2192003,
@@ -216,8 +246,8 @@ activity6 = Activity.create!(
   address: "Koningin Astridplein 20-26, 2018 Antwerpen",
   price: 26,
   location: 'Antwerpen',
-  start_date: Date.new(2023, 9, 6),
-  end_date: Date.new(2023, 9, 9),
+  start_date: Date.new(2023, 9, 9),
+  end_date: Date.new(2023, 9, 30),
   category: 'indoor',
   link: "https://www.zooantwerpen.be/fr/tickets-dentree/?gclid=Cj0KCQjw9MCnBhCYARIsAB1WQVVMT1w4O5tL9JPanCltQLbLgitf3RuLYPjyefCYjv1bubB_dMMHTX0aAsp5EALw_wcB",
 
@@ -253,7 +283,7 @@ activity7 = Activity.create!(
   price: 10,
   location: 'Gent',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 10),
+  end_date: Date.new(2023, 9, 30),
   category: 'outdoor',
   link: "https://www.ballorig.be/",
   latitude: 51.0744215,
@@ -285,7 +315,7 @@ activity8 = Activity.create!(
   price: 0,
   location: 'Gent',
   start_date: Date.new(2023, 9, 9),
-  end_date: Date.new(2023, 9, 17),
+  end_date: Date.new(2023, 9, 30),
   category: 'outdoor',
   link: "https://stad.gent/nl/blaarmeersen",
   latitude: 51.0484104,
@@ -305,27 +335,9 @@ end
 
 Chatroom.create!(name: 'Blaarmeersen', activity: activity8)
 
-# file = URI.open("")
-# activity9 = Activity.create!(
-#   name: 'Het Paleis',
-#   description: 'This is an imaginative city theatre where most productions are aimed at children. The programme includes plays, readings and concerts. Children who share the same name as the director of the performance get admitted free..',
-#   capacity: 100,
-#   price: 14,
-#   location: 'Antwerpen',
-#   start_date: Date.new(2023, 9, 5),
-#   end_date: Date.new(2023, 9, 6),
-#   user: User.last
-# )
 
-# if activity9
-#   activity9.photo.attach(io: file, filename: "boat4.jpg", content_type: file.content_type)
-#   puts "Activity created successfully!"
-#   activity9.save
-# else
-#   puts "Failed to create! activity: #{activity9.errors.full_messages.join(', ')}"
-# end
 
-# Chatroom.create!(name: 'Chocolate Nation', activity: activity9)
+# playbeach
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693318147/splish_splash_xrhfxl.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562783/splishsplash3_rwelop.jpg")
@@ -338,8 +350,8 @@ activity10 = Activity.create!(
   address: "Driebeekstraat 21, 9050 Gent",
   price: 14,
   location: 'Gent',
-  start_date: Date.new(2023, 9, 2),
-  end_date: Date.new(2023, 9, 3),
+  start_date: Date.new(2023, 9, 9),
+  end_date: Date.new(2023, 9, 30),
   category: 'outdoor',
   link: "https://www.playbeach.eu/",
   latitude: 51.03782653808594,
@@ -360,3 +372,116 @@ else
 end
 
 Chatroom.create!(name: 'Splish Splash', activity: activity10)
+
+
+
+
+# participations
+
+#-----------Pretland Gent--------------#
+
+participation1 = Participation.new(
+  participation_date: Date.new(2023, 9, 15)
+)
+participation1.activity = activity7
+participation1.user = user1
+participation1.save!
+
+participation2 = Participation.new(
+  participation_date: Date.new(2023, 9, 15)
+)
+participation2.activity = activity7
+participation2.user = user2
+participation2.save!
+
+
+participation3 = Participation.new(
+  participation_date: Date.new(2023, 9, 15)
+)
+participation3.activity = activity7
+participation3.user = user3
+participation3.save!
+
+puts "Participations created Pretland successfully!"
+#-------------------------------------#
+
+participation4 = Participation.new(
+  participation_date: Date.new(2023, 9, 15)
+)
+participation4.activity = activity1
+participation4.user = user1
+participation4.save!
+
+
+participation5 = Participation.new(
+  participation_date: Date.new(2023, 9, 15)
+)
+participation5.activity = activity1
+participation5.user = user2
+participation5.save!
+
+
+participation6 = Participation.new(
+  participation_date: Date.new(2023, 9, 17)
+)
+participation6.activity = activity1
+participation6.user = user3
+participation6.save!
+
+puts "Participations created Babyleek successfully!"
+
+#-------------Komini Partcipations---------------#
+
+participation7 = Participation.new(
+  participation_date: Date.new(2023, 9, 18)
+)
+participation7.activity = activity3
+participation7.user = user2
+participation7.save!
+
+
+participation8 = Participation.new(
+  participation_date: Date.new(2023, 9, 18)
+)
+participation8.activity = activity3
+participation8.user = user1
+participation8.save!
+
+puts "Participations created Babyleek successfully!"
+
+
+#-------------Komini Chat Messages---------------#
+
+message1 = Message.new(
+  content: "Hey Mums, I will be arriving at 1pm, hope to see you there"
+)
+
+message1.chatroom = kominichat
+message1.user = user5
+message1.save!
+
+
+message2 = Message.new(
+  content: "Awesome Hasnae - See you there "
+)
+
+message2.chatroom = kominichat
+message2.user = user2
+message2.save!
+
+message3 = Message.new(
+  content: "Nice to connect Lisa - I am actually leaving from Gare Central Brussels if you want to carpool"
+)
+
+message3.chatroom = kominichat
+message3.user = user5
+message3.save!
+
+
+message4 = Message.new(
+  content: "Great thanks Hasnae - look forward to it"
+)
+
+message4.chatroom = kominichat
+message4.user = user2
+message4.save!

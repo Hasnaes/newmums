@@ -148,7 +148,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561415/
 activity4 = Activity.create!(
   name: 'Plopsa Station',
   description: 'Plopsa is the theme park division of Studio 100, the company operates 8 parks across Belgium, The Netherlands, Germany and Poland. Gert Verhulst as Gert in Plopsaland.',
-  capacity: 100,
+  capacity: 75,
   address: "Mediaplein, 2018 Antwerpen",
   price: 20,
   location: 'Antwerpen',
@@ -175,12 +175,12 @@ Chatroom.create!(name: 'Plopsa Station', activity: activity4)
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/chocolate_nation_ilj2lg.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561412/chocolatenation3_yqn771.jpg")
-file3= URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561411/chocolatenation4_vv04d9.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561411/chocolatenation4_vv04d9.jpg")
 
 activity5 = Activity.create!(
   name: 'Chocolate Nation',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
-  capacity: 100,
+  capacity: 30,
   address: "Koningin Astridplein 7, 2018 Antwerpen",
   price: 14,
   location: 'Antwerpen',
@@ -212,7 +212,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562243/
 activity6 = Activity.create!(
   name: 'Antwerpen Zoo',
   description: 'Antwerp Zoo is a zoo in the centre of Antwerp, Belgium, located next to the Antwerpen-Centraal railway station. It is the oldest animal park in the country, and one of the oldest in the world, established on 21 July 1843.',
-  capacity: 100,
+  capacity: 85,
   address: "Koningin Astridplein 20-26, 2018 Antwerpen",
   price: 26,
   location: 'Antwerpen',
@@ -248,7 +248,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/
 activity7 = Activity.create!(
   name: 'Pretland Gent',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
-  capacity: 100,
+  capacity: 45,
   address: "Hurstweg 8 Galveston, 9000 Gent",
   price: 10,
   location: 'Gent',
@@ -280,7 +280,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/
 activity8 = Activity.create!(
   name: 'Blaarmeersen',
   description: 'Blaarmeersen Sports and Recreation Park is a green jewel beside the Watersportbaan in Ghent. This is where Ghent residents come jogging, and rowing clubs battle it out on the water. The Watersportbaan in Ghent is also the setting for many festivals and activities for people of all ages.',
-  capacity: 100,
+  capacity: 60,
   address: "Strandlaan 24, 9000 Gent",
   price: 0,
   location: 'Gent',
@@ -334,7 +334,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562783/
 activity10 = Activity.create!(
   name: 'Play Beach',
   description: 'Whether you like water adventures, relaxing in a wellness pool or keeping yourself in shape by swimming laps: Ghent offers a lot of possibilities to go swimming, both indoors and outdoors. Come on, let’s dive in!.',
-  capacity: 100,
+  capacity: 80,
   address: "Driebeekstraat 21, 9050 Gent",
   price: 14,
   location: 'Gent',

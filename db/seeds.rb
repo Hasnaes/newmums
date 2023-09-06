@@ -40,6 +40,8 @@ user2 = User.create!(
 )
 puts "success"
 
+file_avatar = URI.open("https://www.cbc.ca/mediacentre/content/images/Catherine2016-thumb.jpg")
+
 user3 = User.create!(
   first_name: 'rohma',
   last_name: 'rohma',
@@ -47,6 +49,16 @@ user3 = User.create!(
   username: 'rohma',
   password: '123456'
 )
+
+if user3
+  user3.avatar.attach(io: file_avatar, filename: "avatarmum.jpeg", content_type: file_avatar.content_type)
+  puts "User picture created!"
+  user3.save
+else
+  puts "Failed to create! user: #{user3.errors.full_messages.join(', ')}"
+end
+puts "success"
+
 user4 = User.create!(
   first_name: 'leo',
   last_name: 'thompson',
@@ -56,6 +68,8 @@ user4 = User.create!(
 )
 puts "success"
 
+file_avatar5 = URI.open("https://as2.ftcdn.net/v2/jpg/04/46/43/55/1000_F_446435523_ph2cTXwzQ9Gf2lfzTRbj9JTfMjjeTH4N.jpg")
+
 user5 = User.create!(
   first_name: 'hasnae',
   last_name: 'hasnae',
@@ -64,14 +78,17 @@ user5 = User.create!(
   password: '123456'
 )
 
-
-
-
+if user5
+  user5.avatar.attach(io: file_avatar5, filename: "avatarmum.jpeg", content_type: file_avatar5.content_type)
+  puts "User picture created!"
+  user5.save
+else
+  puts "Failed to create! user: #{user5.errors.full_messages.join(', ')}"
+end
+puts "success"
 
  #Brussels Activities
 require "open-uri"
-
-
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316351/Babytheek_logo_dkgax9.png")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560039/babytheek2_j6wec6.jpg")

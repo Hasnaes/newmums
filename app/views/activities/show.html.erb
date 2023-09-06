@@ -4,9 +4,9 @@
 <div class="container" id="containershow">
   <div>
     <div>
-    <div><%= (' ⭐ ' * @activity.average_rating)  %>
-      <%if @activity.average_rating >= 4 %>/5 <i class="fa-solid fa-trophy fa-2xs" style="color: #3b2747;"></i>     <%= "   Best activity ever" %>
-      <% end %>
+    <div><p><%= (' ⭐ ' * @activity.average_rating)  %><%= @activity.average_rating %>/5
+      <%if @activity.average_rating >= 4 %> <i class="fa-solid fa-trophy fa-2xs" style="color: #3b2747;"></i>     <%= "   Top rated activity" %>
+      <% end %></p>
     </div> <hr style="width: 50%; border-top: 1px solid black;">
       <div class="card-show text-center">
       <div id="carouselExample" class="carousel slide">
@@ -80,10 +80,12 @@
     <%# <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity - @activity.participations.size Spots <hr> %>
     <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> € | Mum <i class="fa-solid fa-children" style="color: #f2ad73;"></i>   Children Free<hr>
 <%# ------------- Reviews ------------- %>
+<% if Participation.where(user: current_user, activity: @activity).any? %>
   <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i> <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%></p>
       <%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %>
           <%= f.submit %>
       <% end %><hr>
+      <% end %>
     <%# <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.participations.size %>
     <i class="fa-solid fa-link" style="color: #f2ad73;"></i> <%=link_to "Read more about it", @activity.link,  target: "_blank" %> <hr>
 

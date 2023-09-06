@@ -76,14 +76,14 @@
     </div><hr>
   </div>
 
-<%# ------------- Reviews ------------- %>
-  <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i> <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%></p>
-      <%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %>
-          <%= f.submit%>%
-      <% end %><hr>
 <%# ------------- More infos ------------- %>
     <%# <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity - @activity.participations.size Spots <hr> %>
     <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> € | Mum <i class="fa-solid fa-children" style="color: #f2ad73;"></i>   Children Free<hr>
+<%# ------------- Reviews ------------- %>
+  <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i> <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%></p>
+      <%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %>
+          <%= f.submit %>
+      <% end %><hr>
     <%# <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.participations.size %>
     <i class="fa-solid fa-link" style="color: #f2ad73;"></i> <%=link_to "Read more about it", @activity.link,  target: "_blank" %> <hr>
 

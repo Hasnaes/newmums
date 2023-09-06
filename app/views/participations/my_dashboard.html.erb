@@ -1,40 +1,50 @@
 <%= render "shared/topnavbar" %>
 
-<h1>My Activites</h1>
-
+<h1 id="title_dashboard">DASHBOARD</h1><hr>
+<p class="p_dashboard"> Here you can view all the activities planned for the following days.</p>
+<p class="p_dashboard"> Go to <i class="fa-solid fa-link fa-lg" style="color: #3b2747;"></i> to <strong>chat with other moms</strong> taking part in the activity.
+And still possible to <strong>cancel the activity </strong>through <i class="fa-regular fa-rectangle-xmark fa-lg" style="color: #3b2747;"></i></p>
 <div>
   <table class = "mytable">
 
-  <thead>
-    <tr>
-      <th>Activity </th>
-      <th>Category</th>
-      <th>Price</th>
-      <th>Location</th>
-      <th>Mums Attending</th>
-      <th>Date</th>
-      <th>Chatoom</th>
-      <th>Cancel</th>
-    </tr>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Activity </th>
+        <th scope="col">Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Location</th>
+        <th scope="col">Attendee</th>
+        <th scope="col">Date</th>
+        <th scope="col">Chatoom</th>
+        <th scope="col">Cancel</th>
+      </tr>
+
   </thead>
 
   <tbody>
     <% @participations.each do |participation| %>
       <tr>
-        <td><%= link_to participation.activity.name, activity_path(participation.activity) %></td>
-        <td><%= participation.activity.category %></td>
-        <td><%= participation.activity.price %></td>
+      <% count = 0 %>
+      <td><%= count +=1 %></td>
+        <td class="name"><%= link_to participation.activity.name, activity_path(participation.activity) %></td>
+        <% if participation.activity.category == "indoor" %>
+        <td class="color_indoor"><%= participation.activity.category %></td>
+        <% else %>
+        <td class="color_outdoor"><%= participation.activity.category %></td>
+        <% end %>
+        <td><%= participation.activity.price %>€</td>
         <td><%= participation.activity.location %></td>
         <td><%= participation.activity.participations.count %></td>
         <td><%= participation.participation_date %></td>
         <td><%= link_to chatroom_path(participation.activity.chatroom) do %>
-          <i class="fa-solid fa-link"></i>
-        <% end %></td>
+          <i class="fa-solid fa-link fa-lg" style="color: #3b2747;"></i>
+        <% end %>
+        </td>
         <td><%= link_to participation_path(participation),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-            <i class="fa-solid fa-trash-can"></i>
+            <i class="fa-regular fa-rectangle-xmark fa-lg" style="color: #3b2747;"></i>
         <% end %></td>
         </tr>
-
     <% end %>
   </tbody>
   </table>

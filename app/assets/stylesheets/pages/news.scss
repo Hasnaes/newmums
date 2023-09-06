@@ -1,0 +1,50 @@
+.card-product-news {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-product-news img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product-news h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product-news p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-news .card-product-infos {
+  padding: 16px;
+}
+
+
+.card-container-news {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a 4-column grid */
+  gap: 20px; /* Add spacing between cards */
+  margin: 80px;
+}
+
+
+.card-product-news:hover {
+  /* Styles to apply when hovering over a card */
+  transform: scale(1.05); /* Enlarge the card on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Change the box shadow on hover */
+}

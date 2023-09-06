@@ -1,0 +1,13 @@
+
+
+<div class="card-container-news">
+  <% @news.each do |news| %>
+    <div class="card-product-news">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos-news">
+        <h2><%= news.title %></h2>
+        <p><%= news.description %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

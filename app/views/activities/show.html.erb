@@ -49,13 +49,7 @@
         </div>
         <div class="card-footer text-muted">
           <div class="row">
-            <div class="col" style="margin: 20px;">
-                <%# <%= link_to '➕ Participate', activity_participations_path(@activity), data: {turbo_method: :post}%>
-               <%= simple_form_for [@activity, @participation], data: { controller: 'flatpickr' } do |f| %>
-               <%= f.date_field :participation_date, as: :date_field, input_html: { data: { flatpickr_target: "participtationDate" } } %>
-               <%= f.submit 'Confirm Date' %>
-               <% end %>
-            </div>
+
           </div>
         </div>
       </div>
@@ -66,8 +60,13 @@
     <h1><%= @activity.name %><hr></h1>
     <i class="fa-solid fa-play" style="color: #472151;"></i> <%= @activity.description %><hr>
     <i class="fa-solid fa-location-pin" style="color: #f2ad73;"></i>  <%= @activity.address %> <hr>
-    <i class='fas fa-calendar-alt'style="color: #f2ad73;"></i> <%= @activity.start_date%> - <%= @activity.end_date%> <hr>
-
+    <i class='fas fa-calendar-alt'style="color: #f2ad73;"></i> <%= @activity.start_date%> - <%= @activity.end_date%>
+<div class="col" style="margin: 20px;">
+                <%# <%= link_to '➕ Participate', activity_participations_path(@activity), data: {turbo_method: :post}%>
+               <%= simple_form_for [@activity, @participation], data: { controller: 'flatpickr' } do |f| %>
+               <%= f.date_field :participation_date, as: :date_field, input_html: { data: { flatpickr_target: "participtationDate" } } %>
+               <%= f.submit 'Confirm Date' %>
+               <% end %></div> <hr>
 
   <div class="d-none" data-toggle-map-target="map">
       <div class="mapshow" style="width: 400px; height: 250px;"
@@ -77,14 +76,14 @@
     </div><hr>
   </div>
 
-<%# ------------- Reviews ------------- %>
-  <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i> <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%></p>
-      <%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %>
-          <%= f.submit%>%
-      <% end %><hr>
 <%# ------------- More infos ------------- %>
     <%# <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity - @activity.participations.size Spots <hr> %>
     <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> € | Mum <i class="fa-solid fa-children" style="color: #f2ad73;"></i>   Children Free<hr>
+<%# ------------- Reviews ------------- %>
+  <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i> <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%></p>
+      <%= f.input :rating, collection: (1..5).to_a, label: "Add a rating", input_html: {data: { controller: "star-rating", action: "click->form-submit#submit"} }  %>
+          <%= f.submit %>
+      <% end %><hr>
     <%# <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.participations.size %>
     <i class="fa-solid fa-link" style="color: #f2ad73;"></i> <%=link_to "Read more about it", @activity.link,  target: "_blank" %> <hr>
 

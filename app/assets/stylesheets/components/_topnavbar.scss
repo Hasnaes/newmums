@@ -17,9 +17,34 @@
 }
 
 .nav-item .fa-solid{
-  width: 100px;
+  width: 20px;
 }
 
 .sidemenu a{
   color:#ffa345;
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.334);
+  }
+}
+
+.sidemenu{
+  display: flex;
+  align-items: center;
+}
+
+.avatar-bordered{
+  width: 60px;
+  cursor: pointer;
+}
+
+.dropdown-menu{
+  background-color: #ffa2457e;
+}
+
+.navbar-nav{
+  align-items: center;
+}
+
+.navbar-nav li{
+  margin-left: 20px;
 }

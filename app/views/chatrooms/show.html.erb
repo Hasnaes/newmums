@@ -1,6 +1,7 @@
 <%= render "shared/topnavbar" %>
 
-<div id="chatroom_container" class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+<div id="chatroom_container" class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"    data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+
   <h2 class="icon_chatroom"><i class="fa-solid fa-comment-dots" style="color: #ffa345;"></i></h2>
   <h1 class="title_chatroom"><%= @chatroom.name + " Team"%></h1>
 
@@ -16,19 +17,11 @@
       <% end %>
     </div>
 
-  <%# <div class ="chatroom">
-    <div class="form_message"> %>
-    <%= simple_form_for [@chatroom, @message], html: { class: "d-flex custom-form", class:"unique_form" data: { action: "turbo:submit-end->chatroom-subscription#resetForm" } } do |f| %>
+    <%= simple_form_for [@chatroom, @message], html: { class: "d-flex custom-form", data: { action: "turbo:submit-end->chatroom-subscription#resetForm" } } do |f| %>
       <%= f.input :content,
                  label: false,
                  placeholder: "Message ##{@chatroom.name} team",
                  wrapper_html: {class: "flex-grow-1"} %>
       <%= f.submit "Send", class: "btn btn-primary mb-3"%>
-    <%# </div> %>
   <% end %>
-  <div  class= "d-none" class="container chatroom"
-    data-controller="chatroom-subscription"
-    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
-    data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
-  </div>
 </div>

@@ -17,8 +17,6 @@ export default class extends Controller {
   }
 
   #insertMessageAndScrollDown(data) {
-    this.messagesTarget.insertAdjacentHTML("beforeend", data)
-    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
 
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)

@@ -1,15 +1,42 @@
-
 <%= render "shared/topnavbar" %>
-<div class="card-container-news">
-  <% @news.each do |news| %>
-    <div class="card-product-news">
-      <%= cl_image_tag news.photo.key, width: 150, height: 150, crop: :fill%>
-      <div class="card-product-infos-news">
-        <h2><%= news.title %></h2>
-        <h3><%= news.author %> | <%= news.date %></h3>
-        <p><%= news.description %></p>
-        <p><%= news.link %></p>
+<div class="all_tips">
+  <div class="container" id="themes_color">
+    <div id="themes" class= "d-flex">
+      <div class="education">
+        <%= link_to params: {where: "Education"}, method: :get do %>
+        <%= image_tag "education.avif", width: 400, height: 350, crop: :fill %>
+        <p class="link-education">EDUCATION</p>
+        <% end %>
       </div>
+      <div class="education">
+        <%= link_to "Products", params: {where: "Products"}, method: :get do %>
+        <%= image_tag "allproduct.webp", width: 400, height: 350, crop: :fill %>
+        <p class="link-education">PRODUCTS</p>
+        <% end %>
+      </div>
+      <div class="education">
+        <%= link_to "Feeding", params: {where: "Feeding"}, method: :get do %>
+        <%= image_tag "feeding.png", width: 400, height: 350, crop: :fill %>
+        <p class="link-education">FEEDING</p>
+        <% end %>
+      </div>
+
     </div>
-  <% end %>
+      <div class="link_tips"><%= link_to "SEE ALL TIPS & TRICKS", news_index_path %></div>
+  </div>
+
+
+  <div class="card-container-news">
+    <% @news.each do |news| %>
+      <div class="card-product-news">
+        <%= cl_image_tag news.photo.key, width: 150, height: 150, crop: :fill%>
+        <div class="card-product-infos-news">
+          <h3 style="color: #66adab;"><%= news.author %> | <%= news.date %></h3>
+          <h2><%= news.title %></h2>
+          <p><%= news.description %></p>
+          <p><%= link_to "SEE MORE", news.link %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

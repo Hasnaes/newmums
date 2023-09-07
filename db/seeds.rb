@@ -632,8 +632,6 @@ news2 = News.create!(
   description: "From the moment your baby is born, there are a number of things you can do to improve your chances for breastfeeding success.  Keeping your baby with you after the birth will promote a feeling of closeness and a strong hormonal response that is linked with breastfeeding success.  In many cases it is even possible to have your baby with you immediately after a caesarean birth. "
 )
 
-
-
 if news2
   news2.photo.attach(io: newspic2, filename: "news2.jpg", content_type: newspic2.content_type)
 
@@ -719,7 +717,16 @@ news6 = News.create!(
   "
 )
 
-news4.save!
+news6.save!
+
+
+if news6
+  news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
+
+  puts "News Article with Image created!"
+  news6.save!
+
+end
 
 #--------------News reviews--------------------------
 puts "Creating reviews..."
@@ -800,14 +807,6 @@ review12 = Review.create!(
   user_id: user3.id
 )
 puts "review #{review12.id} has been creating" if review12.save!
-
-if news6
-  news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
-
-  puts "News Article with Image created!"
-  news6.save!
-
-end
 
 #--------------News 7--------------------------
 

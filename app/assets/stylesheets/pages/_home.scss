@@ -1,12 +1,15 @@
 // Specific CSS for your home-page
 body{
   background-color: white;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 100px !important;
 }
 
 .cities{
   display: flex;
   margin: 10px;
-  margin-left: 150px;
+  margin-left: 145px;
 }
 
 .cities .btn{
@@ -17,6 +20,8 @@ body{
   padding: 5px;
   border-style: none;
   font-family: 'Montserrat', sans-serif;
+  border-radius: 10px 10px;
+  margin-top: 20px;
 
   &:hover{
     background-color: #ffa345;
@@ -196,5 +201,5 @@ li{
 }
 
 .mainbuttons .news {
-  background-color: red;
+  background-color: #f2ac73b3;
 }

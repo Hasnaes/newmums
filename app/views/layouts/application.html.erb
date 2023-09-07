@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Amatic+SC&family=Assistant:wght@500&family=Cardo&family=Cormorant+Garamond:wght@300&family=Figtree:wght@500&family=Montserrat:wght@200;300;400;500;600&family=Open+Sans:wght@300&family=Raleway:wght@300;400&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://ga.jspm.io/npm:star-rating.js@4.3.0/dist/star-rating.css">
+    <meta name="turbo-visit-control" content="reload">
   </head>
 
   <body>
@@ -21,16 +22,16 @@
     <%= render "shared/flashes" %>
     <%= render "shared/flashes" %>
     <%= yield %>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/Hasnaes/newmums" target="blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/explore/tags/newmum/" target="blank" ><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/newgenmum/" target="blank"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="footer-copyright">
+      NewMum with <i class="fas fa-heart"></i>
+    </div>
+  </div>
   </body>
 
-  <div class="footer">
-  <div class="footer-links">
-    <a href="https://github.com/Hasnaes/newmums" target="blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.instagram.com/explore/tags/newmum/" target="blank" ><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/newgenmum/" target="blank"><i class="fab fa-facebook"></i></a>
-  </div>
-  <div class="footer-copyright">
-    NewMum with <i class="fas fa-heart"></i>
-  </div>
-</div>
 </html>

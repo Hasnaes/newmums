@@ -9,8 +9,8 @@
         <button><%= link_to "DISCOVER ALL", "#toppage" %></button>
         <% if not user_signed_in? %>
         <button><%= link_to "CONNECT", new_user_session_path %></button>
-        <% else %>
-        <button class="news"><%= link_to "NEWS", new_user_session_path %></button>
+        <%# <% else %>
+        <%# <button class="news"><%= link_to "NEWS", new_user_session_path</button>  %>
         <% end %>
       </div>
       <div class="cities" >

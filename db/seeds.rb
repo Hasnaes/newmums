@@ -620,7 +620,7 @@ if news1
 end
 #--------------News 2--------------------------
 
-newspic2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079452/Screenshot_2023-09-07_at_11.32.42_am_h0xybk.jpg")
+newspic2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081490/Screenshot_2023-09-07_at_12.08.15_pm_2_ceqznk.jpg")
 
 
 news2 = News.create!(
@@ -642,7 +642,7 @@ if news2
 end
 
 #--------------News 3--------------------------
-newspic3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+newspic3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079452/Screenshot_2023-09-07_at_11.32.42_am_h0xybk.jpg")
 
 news3 = News.create!(
   title: "Ways to Help Your Baby Love Food as Much as You Do",
@@ -684,7 +684,7 @@ end
 
 #--------------News 5--------------------------
 
-newspic5 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+newspic5 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081558/news_5_imgae_vkxday.jpg")
 
 news5 = News.create!(
   title: "A Simple Guide to Choosing the Safest Baby Care Products",
@@ -706,7 +706,7 @@ end
 
 #--------------News 6--------------------------
 
-newspic6 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+newspic6 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693560039/babytheek3_swwm8b.jpg")
 
 news6 = News.create!(
   title: "How To Choose Premium Baby Care Products -Tips And Tricks",
@@ -803,7 +803,6 @@ puts "review #{review12.id} has been creating" if review12.save!
 =======
 
 
-
 if news6
   news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
 
@@ -813,7 +812,7 @@ if news6
 end
 #--------------News 7--------------------------
 
-newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081620/development/u2yny9ichgwhfz5951iqashiq8wm.jpg")
 
 
 news7 = News.create!(
@@ -835,7 +834,7 @@ if news7
 end
 #--------------News 8--------------------------
 
-newspic8 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+newspic8 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081882/7_ev6cf7.jpg")
 
 news8 = News.create!(
   title: "Best Educational Trips for Kids",
@@ -856,7 +855,7 @@ end
 
 #--------------News 9--------------------------
 
-newspic9 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+newspic9 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081991/newborn_3_ruulvu.jpg")
 
 news9 = News.create!(
   title: "Feeding your newborn: Tips for new parents",

@@ -541,6 +541,7 @@ message7.save!
 
 #--------------News seeds--------------------------
 
+newspic1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694078056/news1new_w8gtdt.jpg")
 
 news1 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -550,11 +551,19 @@ news1 = News.create!(
   link: 'https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/healthy-baby/art-20047741',
   description: "Feeding a newborn is a round-the-clock commitment. It's also an opportunity to begin forming a bond with the newest member of your family. Those late-night feedings, while exhausting, can be some of the most intimate moments you share with your baby. As you cradle them in your arms and nourish them with love and sustenance, you're not just providing essential nutrients; you're also establishing a deep connection that will grow stronger with each passing day."
 )
-news1.save!
 
 
+if news1
+  news1.photo.attach(io: newspic1, filename: "news1.jpg", content_type: newspic1.content_type)
 
+  puts "News Article with Image created!"
+  news1.save!
+
+end
 #--------------News 2--------------------------
+
+newspic2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079452/Screenshot_2023-09-07_at_11.32.42_am_h0xybk.jpg")
+
 
 news2 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -564,10 +573,19 @@ news2 = News.create!(
   link: '',
   description: "xxxxxxxxx"
 )
-news2.save!
 
+
+
+if news2
+  news2.photo.attach(io: newspic2, filename: "news2.jpg", content_type: newspic2.content_type)
+
+  puts "News Article with Image created!"
+  news2.save!
+end
 
 #--------------News 3--------------------------
+newspic3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+
 news3 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
   theme: 'Feeding',
@@ -576,9 +594,17 @@ news3 = News.create!(
   link: '',
   description: "xxxxxxxxx"
 )
-news3.save!
+
+
+if news3
+  news3.photo.attach(io: newspic3, filename: "news3.jpg", content_type: newspic3.content_type)
+
+  puts "News Article with Image created!"
+  news3.save!
+end
 
 #--------------News 4--------------------------
+newspic4 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news4 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -588,10 +614,19 @@ news4 = News.create!(
   link: '',
   description: "xxxxxxxxx"
 )
-news4.save!
+
+
+if news4
+  news4.photo.attach(io: newspic4, filename: "news4.jpg", content_type: newspic4.content_type)
+
+  puts "News Article with Image created!"
+  news4.save!
+end
 
 
 #--------------News 5--------------------------
+
+newspic5 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news5 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -601,10 +636,19 @@ news5 = News.create!(
   link: '',
   description: "xxxxxxxxx"
 )
-news5.save!
 
+
+if news5
+  news5.photo.attach(io: newspic5, filename: "news5.jpg", content_type: newspic5.content_type)
+
+  puts "News Article with Image created!"
+  news5.save!
+
+end
 
 #--------------News 6--------------------------
+
+newspic6 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news6 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -614,11 +658,19 @@ news6 = News.create!(
   link: '',
   description: "xxxxxxxxx"
 )
-news6.save!
 
 
+
+if news6
+  news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
+
+  puts "News Article with Image created!"
+  news6.save!
+
+end
 #--------------News 7--------------------------
 
+newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 
 news7 = News.create!(
@@ -629,10 +681,18 @@ news7 = News.create!(
   link: '',
   description: "xxxxxxxxx"
 )
-news7.save!
 
 
+if news7
+  news7.photo.attach(io: newspic7, filename: "news7.jpg", content_type: newspic7.content_type)
+
+  puts "News Article with Image created!"
+  news7.save!
+
+end
 #--------------News 8--------------------------
+
+newspic8 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news8 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -642,10 +702,18 @@ news8 = News.create!(
   link: '',
   description: "xxxxxxxxx"
 )
-news8.save!
 
+
+if news8
+  news8.photo.attach(io: newspic8, filename: "news8.jpg", content_type: newspic8.content_type)
+
+  puts "News Article with Image created!"
+  news8.save!
+end
 
 #--------------News 9--------------------------
+
+newspic9 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news9 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -655,4 +723,11 @@ news9 = News.create!(
   link: '',
   description: "xxxxxxxxx"
 )
-news9.save!
+
+
+if news9
+  news9.photo.attach(io: newspic9, filename: "news9.jpg", content_type: newspic9.content_type)
+
+  puts "News Article with Image created!"
+  news9.save!
+end

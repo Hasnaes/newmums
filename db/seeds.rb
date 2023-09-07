@@ -729,8 +729,7 @@ if news6
 end
 
 #--------------News 7--------------------------
-
-newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081620/development/u2yny9ichgwhfz5951iqashiq8wm.jpg")
+newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693316352/treasure_hunt_nq8rw9.jpg")
 
 news7 = News.create!(
   title: "Helpful Tips for Parents of Toddlers (Age 1 - 3 Years)",

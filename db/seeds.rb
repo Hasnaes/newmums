@@ -801,6 +801,14 @@ review12 = Review.create!(
 )
 puts "review #{review12.id} has been creating" if review12.save!
 
+if news6
+  news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
+
+  puts "News Article with Image created!"
+  news6.save!
+
+end
+
 #--------------News 7--------------------------
 
 newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081620/development/u2yny9ichgwhfz5951iqashiq8wm.jpg")

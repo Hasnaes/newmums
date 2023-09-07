@@ -557,36 +557,36 @@ news1.save!
 #--------------News 2--------------------------
 
 news2 = News.create!(
-  title: "Feeding your newborn: Tips for new parents",
+  title: "Tips for breastfeeding",
   theme: 'Feeding',
-  author: 'Mayo Clinic Staff',
-  date: Date.new(2023, 1, 3),
-  link: '',
-  description: "xxxxxxxxx"
+  author: 'Rebecca Solis',
+  date: Date.new(2020, 1, 3),
+  link: 'https://www.thewomens.org.au/health-information/breastfeeding/breastfeeding-overview/tips-for-breastfeeding-success',
+  description: "From the moment your baby is born, there are a number of things you can do to improve your chances for breastfeeding success.  Keeping your baby with you after the birth will promote a feeling of closeness and a strong hormonal response that is linked with breastfeeding success.  In many cases it is even possible to have your baby with you immediately after a caesarean birth. "
 )
 news2.save!
 
 
 #--------------News 3--------------------------
 news3 = News.create!(
-  title: "Feeding your newborn: Tips for new parents",
+  title: "Ways to Help Your Baby Love Food as Much as You Do",
   theme: 'Feeding',
-  author: 'Mayo Clinic Staff',
-  date: Date.new(2023, 1, 3),
-  link: '',
-  description: "xxxxxxxxx"
+  author: 'Sally Kuzemchak',
+  date: Date.new(2023, 7, 30),
+  link: 'https://www.parents.com/recipes/tips/ways-to-make-your-baby-love-food-as-much-as-you-do/',
+  description: "It's a lot easier to foster these healthy food habits in your baby or toddler now than to shift gears with an 8-year-old. Here's how you can help your kid become confident and comfortable around all kinds of food. Case in point: Research has shown that babies will eat more of a particular fruit or vegetable after they've tasted it between eight and 15 times.2 But many parents give up after three to five tries if their child doesn't like it."
 )
 news3.save!
 
 #--------------News 4--------------------------
 
 news4 = News.create!(
-  title: "Feeding your newborn: Tips for new parents",
-  theme: 'Feeding',
-  author: 'Mayo Clinic Staff',
-  date: Date.new(2023, 1, 3),
-  link: '',
-  description: "xxxxxxxxx"
+  title: "5 tips for choosing safe baby products",
+  theme: 'Products',
+  author: 'Reid Health Team',
+  date: Date.new(2020, 2, 3),
+  link: 'https://www.reidhealth.org/blog/5-tips-for-choosing-safe-baby-products',
+  description: "When searching for safe baby products it is easy to feel overwhelmed. The internet is full of opinions and specially-marketed products. You just want to put your baby’s health first and consider whether the soaps detergents lotions and shampoos in your home are safe for your little one. But how do you know? Here are five tips for choosing products safe enough for your baby."
 )
 news4.save!
 
@@ -594,12 +594,12 @@ news4.save!
 #--------------News 5--------------------------
 
 news5 = News.create!(
-  title: "Feeding your newborn: Tips for new parents",
-  theme: 'Feeding',
-  author: 'Mayo Clinic Staff',
+  title: "A Simple Guide to Choosing the Safest Baby Care Products",
+  theme: 'Products',
+  author: 'Rama Aiyer',
   date: Date.new(2023, 1, 3),
-  link: '',
-  description: "xxxxxxxxx"
+  link: 'https://parenting.firstcry.com/articles/brand-a-simple-guide-to-choosing-the-safest-baby-care-products/',
+  description: "If you are a first-time parent, you will indeed have doubts over the chemical quality of packaged baby products, their shelf life, etc. Your concern is totally justifiable! Before you go on to reading labels, researching online, consulting your doctors and friends to make an informed decision, here is a quick guide to choose safe products for your baby"
 )
 news5.save!
 
@@ -607,12 +607,14 @@ news5.save!
 #--------------News 6--------------------------
 
 news6 = News.create!(
-  title: "Feeding your newborn: Tips for new parents",
-  theme: 'Feeding',
-  author: 'xxxxxxxxxxx',
+  title: "How To Choose Premium Baby Care Products -Tips And Tricks",
+  theme: 'Products',
+  author: 'Editorial Team www.beingtheparent.com',
   date: Date.new(2023, 1, 3),
-  link: '',
-  description: "xxxxxxxxx"
+  link: 'https://www.beingtheparent.com/how-to-choose-premium-baby-care-products-tips-tricks/',
+  description: "There are umpteen products designed for babies in the market with varied designs, textures, colors, shapes, and sizes. However, it is of utmost importance to choose and pick the ones that have been designed for the babies keeping their health and safety under consideration. One must be wise and understand the products that are made by keeping the babies under consideration.
+  The babys doctor or the pediatrician is the appropriate person to guide about the same. As apart from being trained in medical education, he knows the products that are safer. Right from the bedding of the baby, to its chair, tub, furniture, bathing products, lotions, creams, etc.
+  "
 )
 news6.save!
 
@@ -622,12 +624,12 @@ news6.save!
 
 
 news7 = News.create!(
-  title: "Feeding your newborn: Tips for new parents",
-  theme: 'Feeding',
-  author: 'Mayo Clinic Staff',
+  title: "Helpful Tips for Parents of Toddlers (Age 1 - 3 Years)",
+  theme: 'Education',
+  author: 'Mary L. Gavin M.D',
   date: Date.new(2023, 1, 3),
-  link: '',
-  description: "xxxxxxxxx"
+  link: 'https://kidshealth.org/en/parents/learnnewborn.html',
+  description: "Play is the main way that infants learn how to move, communicate, socialize, and understand their surroundings. During the first month of life, your baby will learn by interacting with you.The first thing your baby will learn is to associate you with getting their needs met. So, the feel of your touch, the sound of your voice, and the sight of your face will begin to mean nourishment, warmth, and comfort."
 )
 news7.save!
 
@@ -635,12 +637,12 @@ news7.save!
 #--------------News 8--------------------------
 
 news8 = News.create!(
-  title: "Feeding your newborn: Tips for new parents",
-  theme: 'Feeding',
-  author: 'Mayo Clinic Staff',
-  date: Date.new(2023, 1, 3),
-  link: '',
-  description: "xxxxxxxxx"
+  title: "Best Educational Trips for Kids",
+  theme: 'Education',
+  author: 'Insure my trip team',
+  date: Date.new(2022, 11, 2),
+  link: 'https://www.insuremytrip.com/travel-advice/family-travel/best-educational-trips-for-kids/',
+  description: "Vacations may be the way grown-ups most often find a way to kick back and relax, but taking the kids along often means being a little more active with the daily doings. Solution? Keep them busy by learning! Below we have compiled the best educational trips for kids where adults can have fun too."
 )
 news8.save!
 
@@ -649,10 +651,10 @@ news8.save!
 
 news9 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
-  theme: 'Feeding',
-  author: 'Mayo Clinic Staff',
-  date: Date.new(2023, 1, 3),
-  link: '',
-  description: "xxxxxxxxx"
+  theme: 'Education',
+  author: 'Sheona Gilmour',
+  date: Date.new(2016, 6, 3),
+  link: 'https://www.britishcouncil.org/voices-magazine/five-essential-tips-teaching-very-young-children-english',
+  description: "Teaching English to very young children can be challenging, especially if you haven't done any training for the early years classroom. The first time I walked into a kindergarten, I did not want to go back the next day."
 )
 news9.save!

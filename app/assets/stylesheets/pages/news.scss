@@ -1,6 +1,6 @@
 .card-product-news {
   overflow: hidden;
-  height: 120px;
+  height: 400px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -11,8 +11,8 @@
 }
 
 .card-product-news img {
-  height: 100%;
-  width: 120px;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
 }
 
@@ -36,8 +36,6 @@
 
 
 .card-container-news {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Create a 4-column grid */
   gap: 20px; /* Add spacing between cards */
   margin: 80px;
 }

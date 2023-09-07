@@ -1,24 +1,26 @@
-<%= render "shared/topnavbar" %>
+<% if user_signed_in? %>
+  <%= render "shared/topnavbar" %>
+<% end %>
 <!------ Include the above in your HEAD tag ---------->
 <div id="totalcontainer" data-controller="toggle-map">
-<div class="container" id="containershow">
+<div id="containershow">
   <div>
     <div>
-    <div><p><%= (' ⭐ ' * @activity.average_rating)  %><%= @activity.average_rating %>/5
-      <%if @activity.average_rating >= 4 %> <i class="fa-solid fa-trophy fa-2xs" style="color: #3b2747;"></i>     <%= "   Top rated activity" %>
+    <div><p style="font-size: 30px;"><%= (' ⭐ ' * @activity.average_rating)  %><%= @activity.average_rating %>/5
+      <%if @activity.average_rating >= 4 %> <i class="fa-solid fa-trophy fa-2xs" style="color: #3b2747;"></i><span style="color:#f2ad73;"><%= "    Top rated activity" %></span>
       <% end %></p>
     </div> <hr style="width: 50%; border-top: 1px solid black;">
       <div class="card-show text-center">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <%= cl_image_tag @activity.photos[0].key , width: 600, height: 300%>
+            <%= cl_image_tag @activity.photos[0].key , width: 900, height: 500%>
           </div>
           <div class="carousel-item">
-            <%= cl_image_tag @activity.photos[1].key, width: 600, height: 300%>
+            <%= cl_image_tag @activity.photos[1].key, width: 900, height: 500%>
           </div>
           <div class="carousel-item">
-            <%= cl_image_tag @activity.photos[2].key, width: 600, height: 300%>
+            <%= cl_image_tag @activity.photos[2].key, width: 900, height: 500%>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -38,7 +40,7 @@
              <%# <button class="btnmap" data-toggle="collapse" > %>
 
             <button class="btnmap" data-toggle="collapse" href="" role="button" aria-expanded="false" aria-controls="collapseExample" data-action="click -> toggle-map#maptoggle" >
-              <i class="fas fa-map" style="color: #f2ad73;"></i> Maps
+              <i class="fa-solid fa-map fa-lg" style="color: #f2ad73;"></i> Maps
             </button>
           </p>
           <div class="collapse" id="collapseExample">
@@ -60,13 +62,6 @@
     <h1><%= @activity.name %><hr></h1>
     <i class="fa-solid fa-play" style="color: #472151;"></i> <%= @activity.description %><hr>
     <i class="fa-solid fa-location-pin" style="color: #f2ad73;"></i>  <%= @activity.address %> <hr>
-    <i class='fas fa-calendar-alt'style="color: #f2ad73;"></i> <%= @activity.start_date%> - <%= @activity.end_date%>
-<div class="col" style="margin: 20px;">
-                <%# <%= link_to '➕ Participate', activity_participations_path(@activity), data: {turbo_method: :post}%>
-               <%= simple_form_for [@activity, @participation], data: { controller: 'flatpickr' } do |f| %>
-               <%= f.date_field :participation_date, as: :date_field, input_html: { data: { flatpickr_target: "participtationDate" } } %>
-               <%= f.submit 'Confirm Date' %>
-               <% end %></div> <hr>
 
   <div class="d-none" data-toggle-map-target="map">
       <div class="mapshow" style="width: 400px; height: 250px;"
@@ -78,7 +73,15 @@
 
 <%# ------------- More infos ------------- %>
     <%# <i class="fa-solid fa-person-breastfeeding" style="color: #f2ad73;"></i> <%= @activity.capacity - @activity.participations.size Spots <hr> %>
-    <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> € | Mum <i class="fa-solid fa-children" style="color: #f2ad73;"></i>   Children Free<hr>
+    <i class="fa-solid fa-hand-holding-dollar" style="color: #f2ad73;"></i> <%= @activity.price%> € | Mum    <i class="fa-solid fa-children" style="color: #f2ad73;"></i>   <strong>Children Free</strong><hr>
+
+<%# ------------- Participation button : calender ------------- %>
+    <i class='fas fa-calendar-alt'style="color: #f2ad73;"></i> <%= @activity.start_date%> - <%= @activity.end_date%>
+<div class="col" style="margin: 20px;">
+               <%= simple_form_for [@activity, @participation], data: { controller: 'flatpickr' } do |f| %>
+               <%= f.date_field :participation_date, as: :date_field, input_html: { data: { flatpickr_target: "participtationDate" } } %>
+               <span class="confirm"><%= f.submit 'Confirm Date' %></span>
+               <% end %></div> <hr>
 <%# ------------- Reviews ------------- %>
 <% if Participation.where(user: current_user, activity: @activity).any? %>
   <p><i class="fa-solid fa-star fa-sm" style="color: #f2ad73;"></i> <%= simple_form_for([@activity, @review], data: { controller: "form-submit" }) do |f|%></p>

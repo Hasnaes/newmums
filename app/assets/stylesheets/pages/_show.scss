@@ -1,5 +1,5 @@
 .left-column {
-  width: 35%;
+  // width: 5%;
   position: relative;
 }
 
@@ -10,12 +10,13 @@
 
 .btnmap{
   background-color: #3b2747;
-  padding: 10px;
+  padding: 15px 30px;
   border-radius: 10%;
 }
 
 .card-body button{
   color: white;
+  font-size: 30px;
 }
 
 hr {
@@ -27,6 +28,7 @@ hr {
   margin-bottom: 50px;
   margin-top: 50px;
   margin-left: 100px;
+  margin-right: 0;
 }
 
 #containershow .card-show{
@@ -54,7 +56,11 @@ address{
 
 .moreinfos{
   text-align: justify;
-  margin-right: 50px;
+  font-size: 22px;
+  margin-right: 100px;
+  padding-bottom: 10px;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 75px;
 }
 
 .card-body{
@@ -67,6 +73,11 @@ address{
   & h5{
     margin-top: 20px;
   }
+}
+
+.card-body .card-title{
+  font-size: 45px;
+  color: #3b2747;
 }
 
 .card-footer{
@@ -84,4 +95,20 @@ address{
 
 .submit_rating{
   background-color: black;
+}
+
+.carousel-control-next-icon{
+  height: 100px;
+  width: 100px;
+}
+
+.carousel-control-prev-icon{
+  height: 100px;
+  width: 100px;
+}
+
+.confirm input{
+  background: #f2ad73;
+  border: none;
+  border-radius: 10px;
 }

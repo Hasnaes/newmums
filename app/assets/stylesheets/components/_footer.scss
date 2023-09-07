@@ -10,6 +10,7 @@
   bottom: 0px;
   width: 100%;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -18,15 +19,17 @@
   color: #f2ad73;
   opacity: 0.6;
   text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+  font-size: 50px;
+  padding: 0px 30px;
 }
 .footer-links a:hover {
   opacity: 1;
 }
 .footer .fa-heart {
   color: #D23333;
+  font-size: 30px
 }
 .footer-copyright{
   color: #f2ad73;
+  font-size: 30px;
 }

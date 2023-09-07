@@ -6,7 +6,7 @@
       <% @activities.each do |activity| %>
         <%= link_to activity_path(activity) do %>
           <div class= "card-category">
-            <%= cl_image_tag activity.photos.first.key, width: 300, height: 150, crop: :fill%>
+            <%= cl_image_tag activity.photos.first.key, width: 350, height: 150, crop: :fill%><hr>
             <h1><%= activity.name %></h1>
             <p class="location"><%= activity.location %></p>
             <ul>
@@ -18,16 +18,20 @@
               <% end %>
               <div class= "list">
                 <div class="price">
-              <li><%= activity.price %></li>
-                <p>euros</p>
+                <% if activity.price == 0 %>
+                <li style="text-align: right; color: green;"><%= "free" %></li>
+                <% else %>
+                <li style="text-align: right;"><%= activity.price %></li>
+                <% end %>
+                <p style="font-size: 23px; color: grey;">euros</p>
                 </div>
-                <div class="capacity">
+                <div class="capacity" style="margin-left: 75px">
               <li><%= activity.capacity - activity.participations.size %></li>
-                <p>Spots left</p>
+                <p style="font-size: 23px; color: grey;">Spots left</p>
                 </div>
               </div>
               <hr>
-              <li class="text"><%= activity.description[0..100]%>...</li>
+              <li class="text"><%= activity.description[0..115]%>...</li>
             </ul>
             </div>
         <% end %>

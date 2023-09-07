@@ -23,10 +23,10 @@ And still possible to <strong>cancel the activity </strong>through <i class="fa-
   </thead>
 
   <tbody>
+      <% start = 0 %>
     <% @participations.each do |participation| %>
       <tr>
-      <% count = 0 %>
-      <td><%= count +=1 %></td>
+      <td><%= start +=1 %></td>
         <td class="name"><%= link_to participation.activity.name, activity_path(participation.activity) %></td>
         <% if participation.activity.category == "indoor" %>
         <td class="color_indoor"><%= participation.activity.category %></td>

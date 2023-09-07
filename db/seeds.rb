@@ -541,6 +541,7 @@ message7.save!
 
 #--------------News seeds--------------------------
 
+newspic1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694078056/news1new_w8gtdt.jpg")
 
 news1 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -550,11 +551,19 @@ news1 = News.create!(
   link: 'https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/healthy-baby/art-20047741',
   description: "Feeding a newborn is a round-the-clock commitment. It's also an opportunity to begin forming a bond with the newest member of your family. Those late-night feedings, while exhausting, can be some of the most intimate moments you share with your baby. As you cradle them in your arms and nourish them with love and sustenance, you're not just providing essential nutrients; you're also establishing a deep connection that will grow stronger with each passing day."
 )
-news1.save!
 
 
+if news1
+  news1.photo.attach(io: newspic1, filename: "news1.jpg", content_type: newspic1.content_type)
 
+  puts "News Article with Image created!"
+  news1.save!
+
+end
 #--------------News 2--------------------------
+
+newspic2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079452/Screenshot_2023-09-07_at_11.32.42_am_h0xybk.jpg")
+
 
 news2 = News.create!(
   title: "Tips for breastfeeding",
@@ -564,10 +573,19 @@ news2 = News.create!(
   link: 'https://www.thewomens.org.au/health-information/breastfeeding/breastfeeding-overview/tips-for-breastfeeding-success',
   description: "From the moment your baby is born, there are a number of things you can do to improve your chances for breastfeeding success.  Keeping your baby with you after the birth will promote a feeling of closeness and a strong hormonal response that is linked with breastfeeding success.  In many cases it is even possible to have your baby with you immediately after a caesarean birth. "
 )
-news2.save!
 
+
+
+if news2
+  news2.photo.attach(io: newspic2, filename: "news2.jpg", content_type: newspic2.content_type)
+
+  puts "News Article with Image created!"
+  news2.save!
+end
 
 #--------------News 3--------------------------
+newspic3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+
 news3 = News.create!(
   title: "Ways to Help Your Baby Love Food as Much as You Do",
   theme: 'Feeding',
@@ -576,9 +594,17 @@ news3 = News.create!(
   link: 'https://www.parents.com/recipes/tips/ways-to-make-your-baby-love-food-as-much-as-you-do/',
   description: "It's a lot easier to foster these healthy food habits in your baby or toddler now than to shift gears with an 8-year-old. Here's how you can help your kid become confident and comfortable around all kinds of food. Case in point: Research has shown that babies will eat more of a particular fruit or vegetable after they've tasted it between eight and 15 times.2 But many parents give up after three to five tries if their child doesn't like it."
 )
-news3.save!
+
+
+if news3
+  news3.photo.attach(io: newspic3, filename: "news3.jpg", content_type: newspic3.content_type)
+
+  puts "News Article with Image created!"
+  news3.save!
+end
 
 #--------------News 4--------------------------
+newspic4 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news4 = News.create!(
   title: "5 tips for choosing safe baby products",
@@ -588,10 +614,19 @@ news4 = News.create!(
   link: 'https://www.reidhealth.org/blog/5-tips-for-choosing-safe-baby-products',
   description: "When searching for safe baby products it is easy to feel overwhelmed. The internet is full of opinions and specially-marketed products. You just want to put your baby’s health first and consider whether the soaps detergents lotions and shampoos in your home are safe for your little one. But how do you know? Here are five tips for choosing products safe enough for your baby."
 )
-news4.save!
+
+
+if news4
+  news4.photo.attach(io: newspic4, filename: "news4.jpg", content_type: newspic4.content_type)
+
+  puts "News Article with Image created!"
+  news4.save!
+end
 
 
 #--------------News 5--------------------------
+
+newspic5 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news5 = News.create!(
   title: "A Simple Guide to Choosing the Safest Baby Care Products",
@@ -601,10 +636,19 @@ news5 = News.create!(
   link: 'https://parenting.firstcry.com/articles/brand-a-simple-guide-to-choosing-the-safest-baby-care-products/',
   description: "If you are a first-time parent, you will indeed have doubts over the chemical quality of packaged baby products, their shelf life, etc. Your concern is totally justifiable! Before you go on to reading labels, researching online, consulting your doctors and friends to make an informed decision, here is a quick guide to choose safe products for your baby"
 )
-news5.save!
 
+
+if news5
+  news5.photo.attach(io: newspic5, filename: "news5.jpg", content_type: newspic5.content_type)
+
+  puts "News Article with Image created!"
+  news5.save!
+
+end
 
 #--------------News 6--------------------------
+
+newspic6 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news6 = News.create!(
   title: "How To Choose Premium Baby Care Products -Tips And Tricks",
@@ -616,11 +660,19 @@ news6 = News.create!(
   The babys doctor or the pediatrician is the appropriate person to guide about the same. As apart from being trained in medical education, he knows the products that are safer. Right from the bedding of the baby, to its chair, tub, furniture, bathing products, lotions, creams, etc.
   "
 )
-news6.save!
 
 
+
+if news6
+  news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
+
+  puts "News Article with Image created!"
+  news6.save!
+
+end
 #--------------News 7--------------------------
 
+newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 
 news7 = News.create!(
@@ -631,10 +683,18 @@ news7 = News.create!(
   link: 'https://kidshealth.org/en/parents/learnnewborn.html',
   description: "Play is the main way that infants learn how to move, communicate, socialize, and understand their surroundings. During the first month of life, your baby will learn by interacting with you.The first thing your baby will learn is to associate you with getting their needs met. So, the feel of your touch, the sound of your voice, and the sight of your face will begin to mean nourishment, warmth, and comfort."
 )
-news7.save!
 
 
+if news7
+  news7.photo.attach(io: newspic7, filename: "news7.jpg", content_type: newspic7.content_type)
+
+  puts "News Article with Image created!"
+  news7.save!
+
+end
 #--------------News 8--------------------------
+
+newspic8 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news8 = News.create!(
   title: "Best Educational Trips for Kids",
@@ -644,10 +704,18 @@ news8 = News.create!(
   link: 'https://www.insuremytrip.com/travel-advice/family-travel/best-educational-trips-for-kids/',
   description: "Vacations may be the way grown-ups most often find a way to kick back and relax, but taking the kids along often means being a little more active with the daily doings. Solution? Keep them busy by learning! Below we have compiled the best educational trips for kids where adults can have fun too."
 )
-news8.save!
 
+
+if news8
+  news8.photo.attach(io: newspic8, filename: "news8.jpg", content_type: newspic8.content_type)
+
+  puts "News Article with Image created!"
+  news8.save!
+end
 
 #--------------News 9--------------------------
+
+newspic9 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news9 = News.create!(
   title: "Feeding your newborn: Tips for new parents",
@@ -657,4 +725,11 @@ news9 = News.create!(
   link: 'https://www.britishcouncil.org/voices-magazine/five-essential-tips-teaching-very-young-children-english',
   description: "Teaching English to very young children can be challenging, especially if you haven't done any training for the early years classroom. The first time I walked into a kindergarten, I did not want to go back the next day."
 )
-news9.save!
+
+
+if news9
+  news9.photo.attach(io: newspic9, filename: "news9.jpg", content_type: newspic9.content_type)
+
+  puts "News Article with Image created!"
+  news9.save!
+end

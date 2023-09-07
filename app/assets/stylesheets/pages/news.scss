@@ -8,11 +8,12 @@
   border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
+  gap: 20px;
 }
 
 .card-product-news img {
-  height: 300px;
-  width: 300px;
+  height: 75%;
+  width: 250px;
   object-fit: cover;
 }
 
@@ -36,8 +37,11 @@
 
 
 .card-container-news {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Create a 4-column grid */
   gap: 20px; /* Add spacing between cards */
   margin: 80px;
+  align-items: center;
 }
 
 

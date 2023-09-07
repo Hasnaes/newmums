@@ -70,6 +70,10 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Change the box shadow on hover */
 }
 
+.education:hover{
+  transform: scale(1.0); /* Enlarge the card on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Change the box shadow on hover */
+}
 
 // Top page cards
 .card-education{
@@ -127,4 +131,11 @@
 .card-product-infos-news{
   padding-right: 35px;
   padding-left: 40px;
+}
+
+
+.card-product-infos-news a{
+  background-color: #3b2747;
+  color: white;
+  padding: 10px;
 }

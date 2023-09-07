@@ -728,6 +728,66 @@ if news6
 
 end
 
+#--------------News 7--------------------------
+
+newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081620/development/u2yny9ichgwhfz5951iqashiq8wm.jpg")
+
+news7 = News.create!(
+  title: "Helpful Tips for Parents of Toddlers (Age 1 - 3 Years)",
+  theme: 'Education',
+  author: 'Mary L. Gavin M.D',
+  date: Date.new(2023, 1, 3),
+  link: 'https://kidshealth.org/en/parents/learnnewborn.html',
+  description: "Play is the main way that infants learn how to move, communicate, socialize, and understand their surroundings. During the first month of life, your baby will learn by interacting with you.The first thing your baby will learn is to associate you with getting their needs met. So, the feel of your touch, the sound of your voice, and the sight of your face will begin to mean nourishment, warmth, and comfort."
+)
+
+if news7
+  news7.photo.attach(io: newspic7, filename: "news7.jpg", content_type: newspic7.content_type)
+
+  puts "News Article with Image created!"
+  news7.save!
+end
+#--------------News 8--------------------------
+
+newspic8 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081882/7_ev6cf7.jpg")
+
+news8 = News.create!(
+  title: "Best Educational Trips for Kids",
+  theme: 'Education',
+  author: 'Insure my trip team',
+  date: Date.new(2022, 11, 2),
+  link: 'https://www.insuremytrip.com/travel-advice/family-travel/best-educational-trips-for-kids/',
+  description: "Vacations may be the way grown-ups most often find a way to kick back and relax, but taking the kids along often means being a little more active with the daily doings. Solution? Keep them busy by learning! Below we have compiled the best educational trips for kids where adults can have fun too."
+)
+
+
+if news8
+  news8.photo.attach(io: newspic8, filename: "news8.jpg", content_type: newspic8.content_type)
+
+  puts "News Article with Image created!"
+  news8.save!
+end
+
+#--------------News 9--------------------------
+
+newspic9 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081991/newborn_3_ruulvu.jpg")
+
+news9 = News.create!(
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Education',
+  author: 'Sheona Gilmour',
+  date: Date.new(2016, 6, 3),
+  link: 'https://www.britishcouncil.org/voices-magazine/five-essential-tips-teaching-very-young-children-english',
+  description: "Teaching English to very young children can be challenging, especially if you haven't done any training for the early years classroom. The first time I walked into a kindergarten, I did not want to go back the next day."
+)
+
+
+if news9
+  news9.photo.attach(io: newspic9, filename: "news9.jpg", content_type: newspic9.content_type)
+
+  puts "News Article with Image created!"
+  news9.save!
+end
 #--------------News reviews--------------------------
 puts "Creating reviews..."
 
@@ -807,64 +867,3 @@ review12 = Review.create!(
   user_id: user3.id
 )
 puts "review #{review12.id} has been creating" if review12.save!
-
-#--------------News 7--------------------------
-
-newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081620/development/u2yny9ichgwhfz5951iqashiq8wm.jpg")
-
-news7 = News.create!(
-  title: "Helpful Tips for Parents of Toddlers (Age 1 - 3 Years)",
-  theme: 'Education',
-  author: 'Mary L. Gavin M.D',
-  date: Date.new(2023, 1, 3),
-  link: 'https://kidshealth.org/en/parents/learnnewborn.html',
-  description: "Play is the main way that infants learn how to move, communicate, socialize, and understand their surroundings. During the first month of life, your baby will learn by interacting with you.The first thing your baby will learn is to associate you with getting their needs met. So, the feel of your touch, the sound of your voice, and the sight of your face will begin to mean nourishment, warmth, and comfort."
-)
-
-if news7
-  news7.photo.attach(io: newspic7, filename: "news7.jpg", content_type: newspic7.content_type)
-
-  puts "News Article with Image created!"
-  news7.save!
-end
-#--------------News 8--------------------------
-
-newspic8 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081882/7_ev6cf7.jpg")
-
-news8 = News.create!(
-  title: "Best Educational Trips for Kids",
-  theme: 'Education',
-  author: 'Insure my trip team',
-  date: Date.new(2022, 11, 2),
-  link: 'https://www.insuremytrip.com/travel-advice/family-travel/best-educational-trips-for-kids/',
-  description: "Vacations may be the way grown-ups most often find a way to kick back and relax, but taking the kids along often means being a little more active with the daily doings. Solution? Keep them busy by learning! Below we have compiled the best educational trips for kids where adults can have fun too."
-)
-
-
-if news8
-  news8.photo.attach(io: newspic8, filename: "news8.jpg", content_type: newspic8.content_type)
-
-  puts "News Article with Image created!"
-  news8.save!
-end
-
-#--------------News 9--------------------------
-
-newspic9 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081991/newborn_3_ruulvu.jpg")
-
-news9 = News.create!(
-  title: "Feeding your newborn: Tips for new parents",
-  theme: 'Education',
-  author: 'Sheona Gilmour',
-  date: Date.new(2016, 6, 3),
-  link: 'https://www.britishcouncil.org/voices-magazine/five-essential-tips-teaching-very-young-children-english',
-  description: "Teaching English to very young children can be challenging, especially if you haven't done any training for the early years classroom. The first time I walked into a kindergarten, I did not want to go back the next day."
-)
-
-
-if news9
-  news9.photo.attach(io: newspic9, filename: "news9.jpg", content_type: newspic9.content_type)
-
-  puts "News Article with Image created!"
-  news9.save!
-end

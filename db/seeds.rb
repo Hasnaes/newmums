@@ -18,10 +18,16 @@ Activity.destroy_all
 puts "Cleaning users"
 User.destroy_all
 
+
 puts "Cleaning reviews"
 Review.destroy_all
 
+
 puts "success"
+
+News.destroy_all
+puts "news destroyed"
+
 
 # Users
 
@@ -195,7 +201,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561415/
 activity4 = Activity.create!(
   name: 'Plopsa Station',
   description: 'Plopsa is the theme park division of Studio 100, the company operates 8 parks across Belgium, The Netherlands, Germany and Poland. Gert Verhulst as Gert in Plopsaland.',
-  capacity: 100,
+  capacity: 75,
   address: "Mediaplein, 2018 Antwerpen",
   price: 20,
   location: 'Antwerpen',
@@ -222,12 +228,12 @@ Chatroom.create!(name: 'Plopsa Station', activity: activity4)
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/chocolate_nation_ilj2lg.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561412/chocolatenation3_yqn771.jpg")
-file3= URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561411/chocolatenation4_vv04d9.jpg")
+file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561411/chocolatenation4_vv04d9.jpg")
 
 activity5 = Activity.create!(
   name: 'Chocolate Nation',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
-  capacity: 100,
+  capacity: 30,
   address: "Koningin Astridplein 7, 2018 Antwerpen",
   price: 14,
   location: 'Antwerpen',
@@ -258,7 +264,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562243/
 activity6 = Activity.create!(
   name: 'Antwerpen Zoo',
   description: 'Antwerp Zoo is a zoo in the centre of Antwerp, Belgium, located next to the Antwerpen-Centraal railway station. It is the oldest animal park in the country, and one of the oldest in the world, established on 21 July 1843.',
-  capacity: 100,
+  capacity: 85,
   address: "Koningin Astridplein 20-26, 2018 Antwerpen",
   price: 26,
   location: 'Antwerpen',
@@ -293,11 +299,11 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/
 activity7 = Activity.create!(
   name: 'Pretland Gent',
   description: 'Take a magical chocolate trip this summer where you will brave wild waves, get to taste velvety Belgian chocolate and feel like Sjakie in de chocoladefabriek. That is guaranteed to make the sun shine on your face. Book your ticket quickly. You will find us opposite Antwerp Central Station on Astridplein. We are open every day.',
-  capacity: 100,
+  capacity: 45,
   address: "Hurstweg 8 Galveston, 9000 Gent",
   price: 10,
   location: 'Gent',
-  start_date: Date.new(2023, 9, 9),
+  start_date: Date.new(2023, 9, 6),
   end_date: Date.new(2023, 9, 30),
   category: 'outdoor',
   link: "https://www.ballorig.be/",
@@ -316,7 +322,7 @@ else
   puts "Failed to create! activity: #{activity7.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name: 'Pretland Gent', activity: activity7)
+pretlandchat = Chatroom.create!(name: 'Pretland Gent', activity: activity7)
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317902/blaarmeersen_hbgpaa.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/blasmeeran3_qsaevl.jpg")
@@ -325,7 +331,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/
 activity8 = Activity.create!(
   name: 'Blaarmeersen',
   description: 'Blaarmeersen Sports and Recreation Park is a green jewel beside the Watersportbaan in Ghent. This is where Ghent residents come jogging, and rowing clubs battle it out on the water. The Watersportbaan in Ghent is also the setting for many festivals and activities for people of all ages.',
-  capacity: 100,
+  capacity: 60,
   address: "Strandlaan 24, 9000 Gent",
   price: 0,
   location: 'Gent',
@@ -359,7 +365,7 @@ file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562783/
 activity10 = Activity.create!(
   name: 'Play Beach',
   description: 'Whether you like water adventures, relaxing in a wellness pool or keeping yourself in shape by swimming laps: Ghent offers a lot of possibilities to go swimming, both indoors and outdoors. Come on, let’s dive in!.',
-  capacity: 100,
+  capacity: 80,
   address: "Driebeekstraat 21, 9050 Gent",
   price: 14,
   location: 'Gent',
@@ -452,14 +458,14 @@ Chatroom.create!(name: 'Splish Splash', activity: activity12)
 #-----------Pretland Gent--------------#
 
 participation1 = Participation.new(
-  participation_date: Date.new(2023, 9, 15)
+  participation_date: Date.new(2023, 9, 7)
 )
 participation1.activity = activity7
 participation1.user = user1
 participation1.save!
 
 participation2 = Participation.new(
-  participation_date: Date.new(2023, 9, 15)
+  participation_date: Date.new(2023, 9, 7)
 )
 participation2.activity = activity7
 participation2.user = user2
@@ -467,7 +473,7 @@ participation2.save!
 
 
 participation3 = Participation.new(
-  participation_date: Date.new(2023, 9, 15)
+  participation_date: Date.new(2023, 9, 7)
 )
 participation3.activity = activity7
 participation3.user = user3
@@ -559,31 +565,160 @@ message4.save!
 
 
 
+#-------------Pretland Chat Messages---------------#
+
+
+
+
+message5 = Message.new(
+  content: "Benny loved meet all of you! "
+)
+
+message5.chatroom = pretlandchat
+message5.user = user5
+message5.save!
+
+message6 = Message.new(
+  content: "Wow I was so impressed by the safety of this facility"
+)
+
+message6.chatroom = pretlandchat
+message6.user = user4
+message6.save!
+
+
+message7 = Message.new(
+  content: "Was great to meet you guy ! look forward to catching up soon"
+)
+message7.chatroom = pretlandchat
+message7.user = user2
+message7.save!
+
+
+
+
 #--------------News seeds--------------------------
 
+newspic1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694078056/news1new_w8gtdt.jpg")
+
 news1 = News.create!(
-  title: 'test',
-  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: 'https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/healthy-baby/art-20047741',
+  description: "Feeding a newborn is a round-the-clock commitment. It's also an opportunity to begin forming a bond with the newest member of your family. Those late-night feedings, while exhausting, can be some of the most intimate moments you share with your baby. As you cradle them in your arms and nourish them with love and sustenance, you're not just providing essential nutrients; you're also establishing a deep connection that will grow stronger with each passing day."
 )
-news1.save!
+
+
+if news1
+  news1.photo.attach(io: newspic1, filename: "news1.jpg", content_type: newspic1.content_type)
+
+  puts "News Article with Image created!"
+  news1.save!
+
+end
+#--------------News 2--------------------------
+
+newspic2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079452/Screenshot_2023-09-07_at_11.32.42_am_h0xybk.jpg")
 
 
 news2 = News.create!(
-  title: 'test',
-  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+  title: "Tips for breastfeeding",
+  theme: 'Feeding',
+  author: 'Rebecca Solis',
+  date: Date.new(2020, 1, 3),
+  link: 'https://www.thewomens.org.au/health-information/breastfeeding/breastfeeding-overview/tips-for-breastfeeding-success',
+  description: "From the moment your baby is born, there are a number of things you can do to improve your chances for breastfeeding success.  Keeping your baby with you after the birth will promote a feeling of closeness and a strong hormonal response that is linked with breastfeeding success.  In many cases it is even possible to have your baby with you immediately after a caesarean birth. "
 )
-news2.save!
+
+
+
+if news2
+  news2.photo.attach(io: newspic2, filename: "news2.jpg", content_type: newspic2.content_type)
+
+  puts "News Article with Image created!"
+  news2.save!
+end
+
+#--------------News 3--------------------------
+newspic3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news3 = News.create!(
-  title: 'test',
-  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+  title: "Ways to Help Your Baby Love Food as Much as You Do",
+  theme: 'Feeding',
+  author: 'Sally Kuzemchak',
+  date: Date.new(2023, 7, 30),
+  link: 'https://www.parents.com/recipes/tips/ways-to-make-your-baby-love-food-as-much-as-you-do/',
+  description: "It's a lot easier to foster these healthy food habits in your baby or toddler now than to shift gears with an 8-year-old. Here's how you can help your kid become confident and comfortable around all kinds of food. Case in point: Research has shown that babies will eat more of a particular fruit or vegetable after they've tasted it between eight and 15 times.2 But many parents give up after three to five tries if their child doesn't like it."
 )
-news3.save!
+
+
+if news3
+  news3.photo.attach(io: newspic3, filename: "news3.jpg", content_type: newspic3.content_type)
+
+  puts "News Article with Image created!"
+  news3.save!
+end
+
+#--------------News 4--------------------------
+newspic4 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
 
 news4 = News.create!(
-  title: 'test',
-  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+  title: "5 tips for choosing safe baby products",
+  theme: 'Products',
+  author: 'Reid Health Team',
+  date: Date.new(2020, 2, 3),
+  link: 'https://www.reidhealth.org/blog/5-tips-for-choosing-safe-baby-products',
+  description: "When searching for safe baby products it is easy to feel overwhelmed. The internet is full of opinions and specially-marketed products. You just want to put your baby’s health first and consider whether the soaps detergents lotions and shampoos in your home are safe for your little one. But how do you know? Here are five tips for choosing products safe enough for your baby."
 )
+
+
+if news4
+  news4.photo.attach(io: newspic4, filename: "news4.jpg", content_type: newspic4.content_type)
+
+  puts "News Article with Image created!"
+  news4.save!
+end
+
+
+#--------------News 5--------------------------
+
+newspic5 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+
+news5 = News.create!(
+  title: "A Simple Guide to Choosing the Safest Baby Care Products",
+  theme: 'Products',
+  author: 'Rama Aiyer',
+  date: Date.new(2023, 1, 3),
+  link: 'https://parenting.firstcry.com/articles/brand-a-simple-guide-to-choosing-the-safest-baby-care-products/',
+  description: "If you are a first-time parent, you will indeed have doubts over the chemical quality of packaged baby products, their shelf life, etc. Your concern is totally justifiable! Before you go on to reading labels, researching online, consulting your doctors and friends to make an informed decision, here is a quick guide to choose safe products for your baby"
+)
+
+
+if news5
+  news5.photo.attach(io: newspic5, filename: "news5.jpg", content_type: newspic5.content_type)
+
+  puts "News Article with Image created!"
+  news5.save!
+
+end
+
+#--------------News 6--------------------------
+
+newspic6 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+
+news6 = News.create!(
+  title: "How To Choose Premium Baby Care Products -Tips And Tricks",
+  theme: 'Products',
+  author: 'Editorial Team www.beingtheparent.com',
+  date: Date.new(2023, 1, 3),
+  link: 'https://www.beingtheparent.com/how-to-choose-premium-baby-care-products-tips-tricks/',
+  description: "There are umpteen products designed for babies in the market with varied designs, textures, colors, shapes, and sizes. However, it is of utmost importance to choose and pick the ones that have been designed for the babies keeping their health and safety under consideration. One must be wise and understand the products that are made by keeping the babies under consideration.
+  The babys doctor or the pediatrician is the appropriate person to guide about the same. As apart from being trained in medical education, he knows the products that are safer. Right from the bedding of the baby, to its chair, tub, furniture, bathing products, lotions, creams, etc.
+  "
+)
+
 news4.save!
 
 #--------------News reviews--------------------------
@@ -665,3 +800,77 @@ review12 = Review.create!(
   user_id: user3.id
 )
 puts "review #{review12.id} has been creating" if review12.save!
+=======
+
+
+
+if news6
+  news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
+
+  puts "News Article with Image created!"
+  news6.save!
+
+end
+#--------------News 7--------------------------
+
+newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+
+
+news7 = News.create!(
+  title: "Helpful Tips for Parents of Toddlers (Age 1 - 3 Years)",
+  theme: 'Education',
+  author: 'Mary L. Gavin M.D',
+  date: Date.new(2023, 1, 3),
+  link: 'https://kidshealth.org/en/parents/learnnewborn.html',
+  description: "Play is the main way that infants learn how to move, communicate, socialize, and understand their surroundings. During the first month of life, your baby will learn by interacting with you.The first thing your baby will learn is to associate you with getting their needs met. So, the feel of your touch, the sound of your voice, and the sight of your face will begin to mean nourishment, warmth, and comfort."
+)
+
+
+if news7
+  news7.photo.attach(io: newspic7, filename: "news7.jpg", content_type: newspic7.content_type)
+
+  puts "News Article with Image created!"
+  news7.save!
+
+end
+#--------------News 8--------------------------
+
+newspic8 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+
+news8 = News.create!(
+  title: "Best Educational Trips for Kids",
+  theme: 'Education',
+  author: 'Insure my trip team',
+  date: Date.new(2022, 11, 2),
+  link: 'https://www.insuremytrip.com/travel-advice/family-travel/best-educational-trips-for-kids/',
+  description: "Vacations may be the way grown-ups most often find a way to kick back and relax, but taking the kids along often means being a little more active with the daily doings. Solution? Keep them busy by learning! Below we have compiled the best educational trips for kids where adults can have fun too."
+)
+
+
+if news8
+  news8.photo.attach(io: newspic8, filename: "news8.jpg", content_type: newspic8.content_type)
+
+  puts "News Article with Image created!"
+  news8.save!
+end
+
+#--------------News 9--------------------------
+
+newspic9 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694079385/baby_product_2_iyrprl.jpg")
+
+news9 = News.create!(
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Education',
+  author: 'Sheona Gilmour',
+  date: Date.new(2016, 6, 3),
+  link: 'https://www.britishcouncil.org/voices-magazine/five-essential-tips-teaching-very-young-children-english',
+  description: "Teaching English to very young children can be challenging, especially if you haven't done any training for the early years classroom. The first time I walked into a kindergarten, I did not want to go back the next day."
+)
+
+
+if news9
+  news9.photo.attach(io: newspic9, filename: "news9.jpg", content_type: newspic9.content_type)
+
+  puts "News Article with Image created!"
+  news9.save!
+

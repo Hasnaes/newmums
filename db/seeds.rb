@@ -16,8 +16,11 @@ puts "Cleaning Chatroom"
 Activity.destroy_all
 puts "Cleaning users"
 User.destroy_all
-
 puts "success"
+
+
+News.destroy_all
+puts "news destroyed"
 
 
 # Users
@@ -536,41 +539,120 @@ message7.save!
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 #--------------News seeds--------------------------
 
+
 news1 = News.create!(
-  title: 'test',
-  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: 'https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/healthy-baby/art-20047741',
+  description: "Feeding a newborn is a round-the-clock commitment. It's also an opportunity to begin forming a bond with the newest member of your family. Those late-night feedings, while exhausting, can be some of the most intimate moments you share with your baby. As you cradle them in your arms and nourish them with love and sustenance, you're not just providing essential nutrients; you're also establishing a deep connection that will grow stronger with each passing day."
 )
 news1.save!
 
 
+
+#--------------News 2--------------------------
+
 news2 = News.create!(
-  title: 'test',
-  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: '',
+  description: "xxxxxxxxx"
 )
 news2.save!
 
+
+#--------------News 3--------------------------
 news3 = News.create!(
-  title: 'test',
-  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: '',
+  description: "xxxxxxxxx"
 )
 news3.save!
 
+#--------------News 4--------------------------
+
 news4 = News.create!(
-  title: 'test',
-  description: 'A babytheek is a lending service for baby stuff. It is a kind of library for things that a baby needs or that the parents use in the first 12 months after birth.',
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: '',
+  description: "xxxxxxxxx"
 )
 news4.save!
+
+
+#--------------News 5--------------------------
+
+news5 = News.create!(
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: '',
+  description: "xxxxxxxxx"
+)
+news5.save!
+
+
+#--------------News 6--------------------------
+
+news6 = News.create!(
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'xxxxxxxxxxx',
+  date: Date.new(2023, 1, 3),
+  link: '',
+  description: "xxxxxxxxx"
+)
+news6.save!
+
+
+#--------------News 7--------------------------
+
+
+
+news7 = News.create!(
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: '',
+  description: "xxxxxxxxx"
+)
+news7.save!
+
+
+#--------------News 8--------------------------
+
+news8 = News.create!(
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: '',
+  description: "xxxxxxxxx"
+)
+news8.save!
+
+
+#--------------News 9--------------------------
+
+news9 = News.create!(
+  title: "Feeding your newborn: Tips for new parents",
+  theme: 'Feeding',
+  author: 'Mayo Clinic Staff',
+  date: Date.new(2023, 1, 3),
+  link: '',
+  description: "xxxxxxxxx"
+)
+news9.save!

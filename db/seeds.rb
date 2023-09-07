@@ -299,7 +299,7 @@ activity7 = Activity.create!(
   address: "Hurstweg 8 Galveston, 9000 Gent",
   price: 10,
   location: 'Gent',
-  start_date: Date.new(2023, 9, 9),
+  start_date: Date.new(2023, 9, 6),
   end_date: Date.new(2023, 9, 30),
   category: 'outdoor',
   link: "https://www.ballorig.be/",
@@ -318,7 +318,7 @@ else
   puts "Failed to create! activity: #{activity7.errors.full_messages.join(', ')}"
 end
 
-Chatroom.create!(name: 'Pretland Gent', activity: activity7)
+pretlandchat = Chatroom.create!(name: 'Pretland Gent', activity: activity7)
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317902/blaarmeersen_hbgpaa.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562244/blasmeeran3_qsaevl.jpg")
@@ -397,14 +397,14 @@ Chatroom.create!(name: 'Splish Splash', activity: activity10)
 #-----------Pretland Gent--------------#
 
 participation1 = Participation.new(
-  participation_date: Date.new(2023, 9, 15)
+  participation_date: Date.new(2023, 9, 7)
 )
 participation1.activity = activity7
 participation1.user = user1
 participation1.save!
 
 participation2 = Participation.new(
-  participation_date: Date.new(2023, 9, 15)
+  participation_date: Date.new(2023, 9, 7)
 )
 participation2.activity = activity7
 participation2.user = user2
@@ -412,7 +412,7 @@ participation2.save!
 
 
 participation3 = Participation.new(
-  participation_date: Date.new(2023, 9, 15)
+  participation_date: Date.new(2023, 9, 7)
 )
 participation3.activity = activity7
 participation3.user = user3
@@ -501,6 +501,50 @@ message4 = Message.new(
 message4.chatroom = kominichat
 message4.user = user2
 message4.save!
+
+
+
+#-------------Pretland Chat Messages---------------#
+
+
+
+
+message5 = Message.new(
+  content: "Benny loved meet all of you! "
+)
+
+message5.chatroom = pretlandchat
+message5.user = user5
+message5.save!
+
+message6 = Message.new(
+  content: "Wow I was so impressed by the safety of this facility"
+)
+
+message6.chatroom = pretlandchat
+message6.user = user4
+message6.save!
+
+
+message7 = Message.new(
+  content: "Was great to meet you guy ! look forward to catching up soon"
+)
+message7.chatroom = pretlandchat
+message7.user = user2
+message7.save!
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

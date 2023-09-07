@@ -4,19 +4,19 @@
 <div id="containernavbar">
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="container-fluid d-block">
-      <p style="color:white; font-size: 30px; font-weight: 600; margin-left: 150px;">Nurturing New Moms Beyond Motherhood</p>
+      <p class="titlenav" style="color:white; font-size: 50px; font-weight: 600; margin-left: 150px;">Nurturing New Moms Beyond Motherhood</p>
       <div class=" mainbuttons d-flex">
-        <button><%= link_to "DISCOVER ALL", "#toppage" %></button>
+        <button class="discover"><%= link_to "DISCOVER ALL", activities_path %></button>
         <% if not user_signed_in? %>
-        <button><%= link_to "CONNECT", new_user_session_path %></button>
-        <%# <% else %>
-        <%# <button class="news"><%= link_to "NEWS", new_user_session_path</button>  %>
+        <button class="connect"><%= link_to "CONNECT", new_user_session_path %></button>
+        <% else %>
+        <button class="news"><%= link_to "TIPS & TRICKS",  news_index_path %></button>
         <% end %>
       </div>
       <div class="cities" >
         <%= button_to "Antwerpen", "#toppage", params: {where: "Antwerpen"}, method: :get, class: "btn text-white" %>
         <%= button_to "Brussels", "#toppage", params: {where: "Brussels"}, method: :get, class: "btn btn-primary" %>
-        <%= button_to "Wallonie", "#toppage", params: {where: "Wallonie"}, method: :get, class: "btn btn-primary" %>
+        <%= button_to "Wallonia", "#toppage", params: {where: "Wallonia"}, method: :get, class: "btn btn-primary" %>
         <%= button_to "Gent", "#toppage", params: {where: "Gent"}, method: :get, class: "btn btn-primary" %>
       </div>
     </div>

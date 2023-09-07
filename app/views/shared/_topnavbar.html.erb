@@ -4,31 +4,27 @@
       <div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <%= link_to activities_path(), class: "navbar-brand" do %>
-        <%= image_tag "new.png", class: "logotop", style: "width: 100px;"%>
+        <%= image_tag "new.png", class: "logotop", style: "width: 130px;"%>
         <% end %>
               <div class="sidemenu">
-        <%# <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-solid fa-dice-six" style="color: white;"></i>NEWS</a>
-        </li> %>
         <li class="nav-item">
           <a class="nav-link" href="/my_dashboard"><i class="fa-solid fa-table-columns" style="color: white;"></i>MY DASHBOARD</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news"><i class="fa-solid fa-dice-six" style="color: white;"></i>TIPS & TRICKS</a>
+        </li>
       </ul>
       </div>
-            <%# <a class="nav-link" href="/activities"><i class="fa-solid fa-house" style="color: #3b2747;"></i>  Home</a>
-            <a class="nav-link" href="/activities"><i class="fa-solid fa-table-columns" style="color: #3b2747;"></i>  My dashboard</a>
-        </p>
-        </div> %>
 
       <div class="d-flex" data-controller="slidemenu">
 
         <div class="d-flex" style="text-align: center;" class="d-none" data-slidemenu-target="items">
           <ul style="display: flex; align-items: center;">
             <li style="margin-right: 10px;"><%= link_to destroy_user_session_path, data: {turbo_method: "delete"} do %>
-            <i class="fa-solid fa-power-off" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-power-off fa-xl" style="color: #ffffff;"></i>
             <% end %></li>
             <li class="edit" style="margin-right: 10px;"><%= link_to edit_user_registration_path, data: { turbo_action: "replace" } do %>
-            <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
+            <i class="fa-regular fa-pen-to-square fa-xl" style="color: #ffffff;"></i>
             <% end %></li>
           </ul>
         </div>

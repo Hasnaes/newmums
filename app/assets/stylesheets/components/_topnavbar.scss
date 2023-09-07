@@ -9,7 +9,7 @@
 }
 
 .navbarr-lewagon .navbarr-brand .logotop {
-  width: 100px;
+  width: 115px;
 }
 
 #topnavbar{
@@ -17,7 +17,11 @@
 }
 
 .nav-item .fa-solid{
-  width: 20px;
+  width: 30px;
+}
+
+.nav-item .nav-link{
+  font-size: 22px;
 }
 
 .sidemenu a{
@@ -33,7 +37,7 @@
 }
 
 .avatar-bordered{
-  width: 60px;
+  width: 90px;
   cursor: pointer;
 }
 
@@ -47,4 +51,14 @@
 
 .navbar-nav li{
   margin-left: 20px;
+}
+
+@media(max-width: 844px) {
+  .nav-item .nav-link{
+    font-size: 13px;
+  }
+  .logotop {
+    width: 20px;
+  }
+
 }

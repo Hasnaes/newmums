@@ -14,10 +14,16 @@ puts "Cleaning Messages"
 Chatroom.destroy_all
 puts "Cleaning Chatroom"
 Activity.destroy_all
+
 puts "Cleaning users"
 User.destroy_all
-puts "success"
 
+
+puts "Cleaning reviews"
+Review.destroy_all
+
+
+puts "success"
 
 News.destroy_all
 puts "news destroyed"
@@ -165,7 +171,7 @@ activity3 = Activity.create!(
   capacity: 30,
   address: "Drève Richelle 22, 1410 Waterloo, belgium",
   price: 15,
-  location: 'Wallonie',
+  location: 'Wallonia',
   start_date: Date.new(2023, 9, 9),
   end_date: Date.new(2023, 9, 30),
   category: 'indoor',
@@ -185,10 +191,7 @@ end
 
 kominichat = Chatroom.create!(name: 'Komini Waterloo', activity: activity3)
 
-
-
 #Antwerpen
-
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317442/Plopsa_Station_sh2x1v.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693561414/plospa-station3_ibsrrc.jpg")
@@ -254,7 +257,6 @@ end
 
 Chatroom.create!(name: 'Chocolate Nation', activity: activity5)
 
-
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693317659/zoo_antwerp_zd8ld5.jpg")
 file2 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562245/antwerpzoo2_aqasye.jpg")
 file3 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693562243/antwerpzoo3_txacql.jpg")
@@ -287,7 +289,6 @@ else
 end
 
 Chatroom.create!(name: 'Antwerpen Zoo', activity: activity6)
-
 
 #Gent
 
@@ -355,8 +356,6 @@ end
 
 Chatroom.create!(name: 'Blaarmeersen', activity: activity8)
 
-
-
 # playbeach
 
 file1 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1693318147/splish_splash_xrhfxl.jpg")
@@ -383,16 +382,75 @@ if activity10
   activity10.photos.attach(io: file2, filename: "splish-splash.jpg", content_type: file2.content_type)
   activity10.photos.attach(io: file3, filename: "splish-splash.jpg", content_type: file3.content_type)
 
-
   puts "Activity created successfully!"
   activity10.save
 else
-  puts "Failed to create! activity: #{activity4.errors.full_messages.join(', ')}"
+  puts "Failed to create! activity: #{activity10.errors.full_messages.join(', ')}"
 end
 
 Chatroom.create!(name: 'Splish Splash', activity: activity10)
 
+file1 = URI.open("https://www.lemondedayden.be/wp-content/uploads/2020/09/IMG_20200905_004706-1-scaled.jpg")
+file2 = URI.open("https://images0.persgroep.net/rcs/Xi87QwDQV3FM6F4EjU7ly-Q_CE4/diocontent/176230163/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8")
+file3 = URI.open("https://img.static-rmg.be/a/view/q75/w720/h/2509655/img-20200905-004444-jpg.jpg")
 
+activity11 = Activity.create!(
+  name: "Le Monde d'Ayden",
+  description: "Le monde d'Ayden is the first inclusive indoor playground! A place where all children are welcome, and where EXTRAordinary children will find a space entirely adapted and designed to meet their specific needs. To come to Le Monde d'Ayden is to accompany your children in the discovery of new play experiences and workshops, to see them laugh and have fun while breaking down the barriers of the disabled world.",
+  capacity: 20,
+  address: "Rue de Boetendael 164, 1180 Uccle",
+  price: 10,
+  location: 'Brussels',
+  start_date: Date.new(2023, 10, 01),
+  end_date: Date.new(2023, 10, 30),
+  category: 'indoor',
+  link: "https://www.lemondedayden.be/",
+)
+
+if activity11
+  activity11.photos.attach(io: file1, filename: "splish-splash.jpg", content_type: file1.content_type)
+  activity11.photos.attach(io: file2, filename: "splish-splash.jpg", content_type: file2.content_type)
+  activity11.photos.attach(io: file3, filename: "splish-splash.jpg", content_type: file3.content_type)
+
+  puts "Activity created successfully!"
+  activity11.save
+else
+  puts "Failed to create! activity: #{activity11.errors.full_messages.join(', ')}"
+end
+
+Chatroom.create!(name: 'Splish Splash', activity: activity11)
+
+file1 = URI.open("https://previews.123rf.com/images/trish233/trish2331502/trish233150200098/37203050-moms-and-children-at-park.jpg")
+file2 = URI.open("https://laterreestunjardin.com/wp-content/uploads/2018/10/Chateau-de-la-Hulpe-17-1080x675.jpg")
+file3 = URI.open("https://laterreestunjardin.com/wp-content/uploads/2018/10/Chateau-de-la-Hulpe-19-1080x810.jpg")
+
+activity12 = Activity.create!(
+  name: "🌳 Park day - La Hulpe",
+  description: "The Parc du Domaine régional Solvay is one of our country's most beautiful walking areas.
+  A green setting on the outskirts of Brussels, this listed park is part of Wallonia's exceptional heritage and is open to walkers all year round. Its 227 ha of lawns, woods, rhododendron beds and remarkable varieties of trees make it one of the most beautiful parks in Belgium. Paths guide you through wooded hills and ponds rich in exceptional wildlife.
+  In every season, the park offers endless delights and sights.",
+  capacity: 25,
+  address: "Chaussée de Bruxelles 111, 1310 La Hulpe",
+  price: 0,
+  location: 'Wallonia',
+  start_date: Date.new(2023, 10, 10),
+  end_date: Date.new(2023, 10, 15),
+  category: 'outdoor',
+  link: "https://www.chateaudelahulpe.be/",
+)
+
+if activity12
+  activity12.photos.attach(io: file1, filename: "splish-splash.jpg", content_type: file1.content_type)
+  activity12.photos.attach(io: file2, filename: "splish-splash.jpg", content_type: file2.content_type)
+  activity12.photos.attach(io: file3, filename: "splish-splash.jpg", content_type: file3.content_type)
+
+  puts "Activity created successfully!"
+  activity12.save
+else
+  puts "Failed to create! activity: #{activity12.errors.full_messages.join(', ')}"
+end
+
+Chatroom.create!(name: 'Splish Splash', activity: activity12)
 
 
 # participations
@@ -661,6 +719,89 @@ news6 = News.create!(
   "
 )
 
+news4.save!
+
+#--------------News reviews--------------------------
+puts "Creating reviews..."
+
+review1 = Review.create!(
+  rating: 3,
+  activity_id: activity1.id,
+  user_id: user3.id
+)
+puts "review #{review1.id} has been creating" if review1.save!
+
+review2 = Review.create!(
+  rating: 2,
+  activity_id: activity2.id,
+  user_id: user3.id
+)
+puts "review #{review2.id} has been creating" if review2.save!
+
+review3 = Review.create!(
+  rating: 3,
+  activity_id: activity3.id,
+  user_id: user3.id
+)
+puts "review #{review3.id} has been creating" if review3.save!
+
+review4 = Review.create!(
+  rating: 4,
+  activity_id: activity4.id,
+  user_id: user3.id
+)
+puts "review #{review4.id} has been creating" if review4.save!
+
+review5 = Review.create!(
+  rating: 3,
+  activity_id: activity5.id,
+  user_id: user3.id
+)
+puts "review #{review5.id} has been creating" if review5.save!
+
+review6 = Review.create!(
+  rating: 5,
+  activity_id: activity6.id,
+  user_id: user3.id
+)
+puts "review #{review6.id} has been creating" if review6.save!
+
+review7 = Review.create!(
+  rating: 4,
+  activity_id: activity7.id,
+  user_id: user3.id
+)
+puts "review #{review7.id} has been creating" if review7.save!
+
+review8 = Review.create!(
+  rating: 5,
+  activity_id: activity8.id,
+  user_id: user3.id
+)
+puts "review #{review8.id} has been creating" if review8.save!
+
+review10 = Review.create!(
+  rating: 2,
+  activity_id: activity10.id,
+  user_id: user3.id
+)
+puts "review #{review10.id} has been creating" if review10.save!
+
+review11 = Review.create!(
+  rating: 4,
+  activity_id: activity11.id,
+  user_id: user3.id
+)
+puts "review #{review11.id} has been creating" if review11.save!
+
+review12 = Review.create!(
+  rating: 5,
+  activity_id: activity12.id,
+  user_id: user3.id
+)
+puts "review #{review12.id} has been creating" if review12.save!
+=======
+
 
 
 if news6
@@ -732,4 +873,4 @@ if news9
 
   puts "News Article with Image created!"
   news9.save!
-end
+

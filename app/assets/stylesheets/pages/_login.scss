@@ -15,7 +15,6 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: -20px;
 }
 
 .card {
@@ -24,7 +23,7 @@ h2 {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 75%;
-  height: 75%;
+  margin-top: -200px;
 }
 
 
@@ -55,3 +54,10 @@ h2 {
 }
 
 /* Your existing styles for .login and other elements */
+
+.toplogi_in a img{
+  width: 100px;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-left: 830px;
+}

@@ -800,20 +800,10 @@ review12 = Review.create!(
   user_id: user3.id
 )
 puts "review #{review12.id} has been creating" if review12.save!
-=======
 
-
-if news6
-  news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
-
-  puts "News Article with Image created!"
-  news6.save!
-
-end
 #--------------News 7--------------------------
 
 newspic7 = URI.open("https://res.cloudinary.com/ddazjsjwx/image/upload/v1694081620/development/u2yny9ichgwhfz5951iqashiq8wm.jpg")
-
 
 news7 = News.create!(
   title: "Helpful Tips for Parents of Toddlers (Age 1 - 3 Years)",
@@ -824,13 +814,11 @@ news7 = News.create!(
   description: "Play is the main way that infants learn how to move, communicate, socialize, and understand their surroundings. During the first month of life, your baby will learn by interacting with you.The first thing your baby will learn is to associate you with getting their needs met. So, the feel of your touch, the sound of your voice, and the sight of your face will begin to mean nourishment, warmth, and comfort."
 )
 
-
 if news7
   news7.photo.attach(io: newspic7, filename: "news7.jpg", content_type: newspic7.content_type)
 
   puts "News Article with Image created!"
   news7.save!
-
 end
 #--------------News 8--------------------------
 
@@ -872,4 +860,4 @@ if news9
 
   puts "News Article with Image created!"
   news9.save!
-
+end

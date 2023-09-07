@@ -800,8 +800,6 @@ review12 = Review.create!(
   user_id: user3.id
 )
 puts "review #{review12.id} has been creating" if review12.save!
-=======
-
 
 if news6
   news6.photo.attach(io: newspic6, filename: "news6.jpg", content_type: newspic6.content_type)
@@ -872,4 +870,4 @@ if news9
 
   puts "News Article with Image created!"
   news9.save!
-
+end

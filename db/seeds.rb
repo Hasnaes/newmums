@@ -35,7 +35,7 @@ user1 = User.create!(
   first_name: 'michael',
   last_name: 'rodriguez',
   email: 'michael@test.com',
-  username: 'michael',
+  username: 'MICHAEL',
   password: '123456'
 )
 puts "success"
@@ -44,7 +44,7 @@ user2 = User.create!(
   first_name: 'lisa',
   last_name: 'vanpraat',
   email: 'lisa@test.com',
-  username: 'lisa',
+  username: 'LISA',
   password: '123456'
 )
 puts "success"
@@ -55,7 +55,7 @@ user3 = User.create!(
   first_name: 'rohma',
   last_name: 'rohma',
   email: 'rohma@test.com',
-  username: 'rohma',
+  username: 'ROHMA',
   password: '123456'
 )
 
@@ -72,7 +72,7 @@ user4 = User.create!(
   first_name: 'leo',
   last_name: 'thompson',
   email: 'leo@test.com',
-  username: 'leo',
+  username: 'LEO',
   password: '123456'
 )
 puts "success"
@@ -83,7 +83,7 @@ user5 = User.create!(
   first_name: 'hasnae',
   last_name: 'hasnae',
   email: 'hasnae@test.com',
-  username: 'hasnae',
+  username: 'HASNAE',
   password: '123456'
 )
 
